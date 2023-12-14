@@ -30,8 +30,8 @@ nbclient.exceptions.CellTimeoutError: A cell timed out while it was being execut
 The message was: Cell execution timed out.
 Here is a preview of the cell contents:
 -------------------
-['header={', "    'user-agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36'", '}', '', "linkberita = 'https://otomotif.kompas.com/'"]
+['header={', "    'user-agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36'", '}', '', "linkberita = 'https://megapolitan.kompas.com/'"]
 ...
-["    soup2 = BeautifulSoup(req2.text, 'html.parser')", "    judul = soup2.find('h1', 'read__title').text    #class judul berita", '    isi = "".join(soup2.find(\'div\', \'read__content\').text.split(\'\\n\'))', '', '    listpolitik.append([judul,isi])']
+["    soup2 = BeautifulSoup(req2.text, 'html.parser')", "    judul = soup2.find('h1', 'read__title').text    #class judul berita", '    isi = "".join(soup2.find(\'div\', \'read__content\').text.split(\'\\n\'))', '', '    listt.append([judul,isi])']
 -------------------
 

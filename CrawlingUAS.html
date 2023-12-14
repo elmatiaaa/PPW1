@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>UAS PPW &#8212; My sample book</title>
+    <title>Crawling Data Uas &#8212; My sample book</title>
   
   
   
@@ -169,18 +169,13 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="markdown.html">Markdown Files</a></li>
-<li class="toctree-l1"><a class="reference internal" href="notebooks.html">Content with notebooks</a></li>
-<li class="toctree-l1"><a class="reference internal" href="markdown-notebooks.html">Notebooks with MyST Markdown</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Crawlingdata.html">Crawling data berita</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#"><strong>UAS PPW</strong></a></li>
-
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Crawling Data Uas</a></li>
 
 
 
 <li class="toctree-l1"><a class="reference internal" href="scrappingberita.html">Sraping Pada Berita</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Tugas3_LDA.html">LDA</a></li>
-<li class="toctree-l1"><a class="reference internal" href="UAS.html">PROJECT AKHIR</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Uas.html">PROJECT AKHIR</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Uts.html">UTS</a></li>
 
@@ -371,7 +366,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>UAS PPW</h1>
+    <h1>Crawling Data Uas</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -381,8 +376,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><strong>UAS PPW</strong></a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#aplikasi-projek">Aplikasi Projek</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Crawling Data Uas</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#install-dan-import-library"><strong>Install dan Import Library</strong></a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#crawling-berita"><strong>Crawling Berita</strong></a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#otomotif">Otomotif</a></li>
@@ -405,12 +399,8 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="uas-ppw">
-<h1><strong>UAS PPW</strong><a class="headerlink" href="#uas-ppw" title="Permalink to this heading">#</a></h1>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="aplikasi-projek">
-<h1>Aplikasi Projek<a class="headerlink" href="#aplikasi-projek" title="Permalink to this heading">#</a></h1>
-<p>Streamlit :</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="crawling-data-uas">
+<h1>Crawling Data Uas<a class="headerlink" href="#crawling-data-uas" title="Permalink to this heading">#</a></h1>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="install-dan-import-library">
 <h1><strong>Install dan Import Library</strong><a class="headerlink" href="#install-dan-import-library" title="Permalink to this heading">#</a></h1>
@@ -491,97 +481,6 @@ Requirement already satisfied: soupsieve&gt;1.2 in /usr/local/lib/python3.10/dis
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">KeyboardInterrupt</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="nn">&lt;ipython-input-3-8c91154d4ab7&gt;</span> in <span class="ni">&lt;cell line: 9&gt;</span><span class="nt">()</span>
-<span class="g g-Whitespace">      </span><span class="mi">8</span> 
-<span class="g g-Whitespace">      </span><span class="mi">9</span> <span class="k">for</span> <span class="n">halaman</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
-<span class="ne">---&gt; </span><span class="mi">10</span>   <span class="n">req</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">linkberita</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">11</span>   <span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">req</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="s1">&#39;html.parser&#39;</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">12</span>   <span class="n">items</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">findAll</span><span class="p">(</span><span class="s1">&#39;div&#39;</span><span class="p">,</span> <span class="s1">&#39;article__list clearfix&#39;</span><span class="p">)</span> <span class="c1">#class semua berita</span>
-
-<span class="nn">/usr/local/lib/python3.10/dist-packages/requests/api.py</span> in <span class="ni">get</span><span class="nt">(url, params, **kwargs)</span>
-<span class="g g-Whitespace">     </span><span class="mi">71</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">     </span><span class="mi">72</span><span class="sd"> </span>
-<span class="ne">---&gt; </span><span class="mi">73</span><span class="sd">     return request(&quot;get&quot;, url, params=params, **kwargs)</span>
-<span class="g g-Whitespace">     </span><span class="mi">74</span><span class="sd"> </span>
-<span class="g g-Whitespace">     </span><span class="mi">75</span><span class="sd"> </span>
-
-<span class="nn">/usr/local/lib/python3.10/dist-packages/requests/api.py</span> in <span class="ni">request</span><span class="nt">(method, url, **kwargs)</span>
-<span class="g g-Whitespace">     </span><span class="mi">57</span><span class="sd">     # cases, and look like a memory leak in others.</span>
-<span class="g g-Whitespace">     </span><span class="mi">58</span><span class="sd">     with sessions.Session() as session:</span>
-<span class="ne">---&gt; </span><span class="mi">59</span><span class="sd">         return session.request(method=method, url=url, **kwargs)</span>
-<span class="g g-Whitespace">     </span><span class="mi">60</span><span class="sd"> </span>
-<span class="g g-Whitespace">     </span><span class="mi">61</span><span class="sd"> </span>
-
-<span class="nn">/usr/local/lib/python3.10/dist-packages/requests/sessions.py</span> in <span class="ni">request</span><span class="nt">(self, method, url, params, data, headers, cookies, files, auth, timeout, allow_redirects, proxies, hooks, stream, verify, cert, json)</span>
-<span class="g g-Whitespace">    </span><span class="mi">587</span><span class="sd">         }</span>
-<span class="g g-Whitespace">    </span><span class="mi">588</span><span class="sd">         send_kwargs.update(settings)</span>
-<span class="ne">--&gt; </span><span class="mi">589</span><span class="sd">         resp = self.send(prep, **send_kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">590</span><span class="sd"> </span>
-<span class="g g-Whitespace">    </span><span class="mi">591</span><span class="sd">         return resp</span>
-
-<span class="nn">/usr/local/lib/python3.10/dist-packages/requests/sessions.py</span> in <span class="ni">send</span><span class="nt">(self, request, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">701</span><span class="sd"> </span>
-<span class="g g-Whitespace">    </span><span class="mi">702</span><span class="sd">         # Send the request</span>
-<span class="ne">--&gt; </span><span class="mi">703</span><span class="sd">         r = adapter.send(request, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">704</span><span class="sd"> </span>
-<span class="g g-Whitespace">    </span><span class="mi">705</span><span class="sd">         # Total elapsed time of the request (approximately)</span>
-
-<span class="nn">/usr/local/lib/python3.10/dist-packages/requests/adapters.py</span> in <span class="ni">send</span><span class="nt">(self, request, stream, timeout, verify, cert, proxies)</span>
-<span class="g g-Whitespace">    </span><span class="mi">484</span><span class="sd"> </span>
-<span class="g g-Whitespace">    </span><span class="mi">485</span><span class="sd">         try:</span>
-<span class="ne">--&gt; </span><span class="mi">486</span><span class="sd">             resp = conn.urlopen(</span>
-<span class="g g-Whitespace">    </span><span class="mi">487</span><span class="sd">                 method=request.method,</span>
-<span class="g g-Whitespace">    </span><span class="mi">488</span><span class="sd">                 url=url,</span>
-
-<span class="nn">/usr/local/lib/python3.10/dist-packages/urllib3/connectionpool.py</span> in <span class="ni">urlopen</span><span class="nt">(self, method, url, body, headers, retries, redirect, assert_same_host, timeout, pool_timeout, release_conn, chunked, body_pos, preload_content, decode_content, **response_kw)</span>
-<span class="g g-Whitespace">    </span><span class="mi">789</span><span class="sd"> </span>
-<span class="g g-Whitespace">    </span><span class="mi">790</span><span class="sd">             # Make the request on the HTTPConnection object</span>
-<span class="ne">--&gt; </span><span class="mi">791</span><span class="sd">             response = self._make_request(</span>
-<span class="g g-Whitespace">    </span><span class="mi">792</span><span class="sd">                 conn,</span>
-<span class="g g-Whitespace">    </span><span class="mi">793</span><span class="sd">                 method,</span>
-
-<span class="nn">/usr/local/lib/python3.10/dist-packages/urllib3/connectionpool.py</span> in <span class="ni">_make_request</span><span class="nt">(self, conn, method, url, body, headers, retries, timeout, chunked, response_conn, preload_content, decode_content, enforce_content_length)</span>
-<span class="g g-Whitespace">    </span><span class="mi">466</span><span class="sd">             # Trigger any extra validation we need to do.</span>
-<span class="g g-Whitespace">    </span><span class="mi">467</span><span class="sd">             try:</span>
-<span class="ne">--&gt; </span><span class="mi">468</span><span class="sd">                 self._validate_conn(conn)</span>
-<span class="g g-Whitespace">    </span><span class="mi">469</span><span class="sd">             except (SocketTimeout, BaseSSLError) as e:</span>
-<span class="g g-Whitespace">    </span><span class="mi">470</span><span class="sd">                 self._raise_timeout(err=e, url=url, timeout_value=conn.timeout)</span>
-
-<span class="nn">/usr/local/lib/python3.10/dist-packages/urllib3/connectionpool.py</span> in <span class="ni">_validate_conn</span><span class="nt">(self, conn)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1095</span><span class="sd">         # Force connect early to allow us to validate the connection.</span>
-<span class="g g-Whitespace">   </span><span class="mi">1096</span><span class="sd">         if conn.is_closed:</span>
-<span class="ne">-&gt; </span><span class="mi">1097</span><span class="sd">             conn.connect()</span>
-<span class="g g-Whitespace">   </span><span class="mi">1098</span><span class="sd"> </span>
-<span class="g g-Whitespace">   </span><span class="mi">1099</span><span class="sd">         if not conn.is_verified:</span>
-
-<span class="nn">/usr/local/lib/python3.10/dist-packages/urllib3/connection.py</span> in <span class="ni">connect</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">609</span><span class="sd">     def connect(self) -&gt; None:</span>
-<span class="g g-Whitespace">    </span><span class="mi">610</span><span class="sd">         sock: socket.socket | ssl.SSLSocket</span>
-<span class="ne">--&gt; </span><span class="mi">611</span><span class="sd">         self.sock = sock = self._new_conn()</span>
-<span class="g g-Whitespace">    </span><span class="mi">612</span><span class="sd">         server_hostname: str = self.host</span>
-<span class="g g-Whitespace">    </span><span class="mi">613</span><span class="sd">         tls_in_tls = False</span>
-
-<span class="nn">/usr/local/lib/python3.10/dist-packages/urllib3/connection.py</span> in <span class="ni">_new_conn</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">201</span><span class="sd">         &quot;&quot;&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">202</span>         <span class="k">try</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">203</span>             <span class="n">sock</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">create_connection</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">204</span>                 <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_dns_host</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">port</span><span class="p">),</span>
-<span class="g g-Whitespace">    </span><span class="mi">205</span>                 <span class="bp">self</span><span class="o">.</span><span class="n">timeout</span><span class="p">,</span>
-
-<span class="nn">/usr/local/lib/python3.10/dist-packages/urllib3/util/connection.py</span> in <span class="ni">create_connection</span><span class="nt">(address, timeout, source_address, socket_options)</span>
-<span class="g g-Whitespace">     </span><span class="mi">71</span>             <span class="k">if</span> <span class="n">source_address</span><span class="p">:</span>
-<span class="g g-Whitespace">     </span><span class="mi">72</span>                 <span class="n">sock</span><span class="o">.</span><span class="n">bind</span><span class="p">(</span><span class="n">source_address</span><span class="p">)</span>
-<span class="ne">---&gt; </span><span class="mi">73</span>             <span class="n">sock</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">sa</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">74</span>             <span class="c1"># Break explicitly a reference cycle</span>
-<span class="g g-Whitespace">     </span><span class="mi">75</span>             <span class="n">err</span> <span class="o">=</span> <span class="kc">None</span>
-
-<span class="ne">KeyboardInterrupt</span>: 
-</pre></div>
-</div>
-</div>
 </div>
 </section>
 </section>
@@ -610,6 +509,74 @@ Requirement already satisfied: soupsieve&gt;1.2 in /usr/local/lib/python3.10/dis
     <span class="n">isi</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">soup2</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;div&#39;</span><span class="p">,</span> <span class="s1">&#39;read__content&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">))</span>
 
     <span class="n">listt</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">judul</span><span class="p">,</span><span class="n">isi</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">KeyboardInterrupt</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="nn">&lt;ipython-input-4-2fa06d20a5b6&gt;</span> in <span class="ni">&lt;cell line: 9&gt;</span><span class="nt">()</span>
+<span class="g g-Whitespace">     </span><span class="mi">15</span> 
+<span class="g g-Whitespace">     </span><span class="mi">16</span>     <span class="n">req2</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">link</span><span class="p">)</span>
+<span class="ne">---&gt; </span><span class="mi">17</span>     <span class="n">soup2</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">req2</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="s1">&#39;html.parser&#39;</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">18</span>     <span class="n">judul</span> <span class="o">=</span> <span class="n">soup2</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;h1&#39;</span><span class="p">,</span> <span class="s1">&#39;read__title&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">text</span>    <span class="c1">#class judul berita</span>
+<span class="g g-Whitespace">     </span><span class="mi">19</span>     <span class="n">isi</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">soup2</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;div&#39;</span><span class="p">,</span> <span class="s1">&#39;read__content&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">))</span>
+
+<span class="nn">/usr/local/lib/python3.10/dist-packages/bs4/__init__.py</span> in <span class="ni">__init__</span><span class="nt">(self, markup, features, builder, parse_only, from_encoding, exclude_encodings, element_classes, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">331</span>             <span class="bp">self</span><span class="o">.</span><span class="n">builder</span><span class="o">.</span><span class="n">initialize_soup</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">332</span>             <span class="k">try</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">333</span>                 <span class="bp">self</span><span class="o">.</span><span class="n">_feed</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">334</span>                 <span class="n">success</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="g g-Whitespace">    </span><span class="mi">335</span>                 <span class="k">break</span>
+
+<span class="nn">/usr/local/lib/python3.10/dist-packages/bs4/__init__.py</span> in <span class="ni">_feed</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">    </span><span class="mi">450</span>         <span class="bp">self</span><span class="o">.</span><span class="n">builder</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">451</span> 
+<span class="ne">--&gt; </span><span class="mi">452</span>         <span class="bp">self</span><span class="o">.</span><span class="n">builder</span><span class="o">.</span><span class="n">feed</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">markup</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">453</span>         <span class="c1"># Close out any unfinished strings and close all the open tags.</span>
+<span class="g g-Whitespace">    </span><span class="mi">454</span>         <span class="bp">self</span><span class="o">.</span><span class="n">endData</span><span class="p">()</span>
+
+<span class="nn">/usr/local/lib/python3.10/dist-packages/bs4/builder/_htmlparser.py</span> in <span class="ni">feed</span><span class="nt">(self, markup)</span>
+<span class="g g-Whitespace">    </span><span class="mi">360</span>         <span class="n">parser</span> <span class="o">=</span> <span class="n">BeautifulSoupHTMLParser</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">361</span>         <span class="n">parser</span><span class="o">.</span><span class="n">soup</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">soup</span>
+<span class="ne">--&gt; </span><span class="mi">362</span>         <span class="n">parser</span><span class="o">.</span><span class="n">feed</span><span class="p">(</span><span class="n">markup</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">363</span>         <span class="n">parser</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">364</span>         <span class="n">parser</span><span class="o">.</span><span class="n">already_closed_empty_element</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="nn">/usr/lib/python3.10/html/parser.py</span> in <span class="ni">feed</span><span class="nt">(self, data)</span>
+<span class="g g-Whitespace">    </span><span class="mi">108</span>         <span class="s2">&quot;&quot;&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">109</span><span class="s2">         self.rawdata = self.rawdata + data</span>
+<span class="ne">--&gt; </span><span class="mi">110</span><span class="s2">         self.goahead(0)</span>
+<span class="g g-Whitespace">    </span><span class="mi">111</span><span class="s2"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">112</span><span class="s2">     def close(self):</span>
+
+<span class="nn">/usr/lib/python3.10/html/parser.py</span> in <span class="ni">goahead</span><span class="nt">(self, end)</span>
+<span class="g g-Whitespace">    </span><span class="mi">168</span><span class="s2">             if startswith(&#39;&lt;&#39;, i):</span>
+<span class="g g-Whitespace">    </span><span class="mi">169</span><span class="s2">                 if starttagopen.match(rawdata, i): # &lt; + letter</span>
+<span class="ne">--&gt; </span><span class="mi">170</span><span class="s2">                     k = self.parse_starttag(i)</span>
+<span class="g g-Whitespace">    </span><span class="mi">171</span><span class="s2">                 elif startswith(&quot;&lt;/&quot;, i):</span>
+<span class="g g-Whitespace">    </span><span class="mi">172</span><span class="s2">                     k = self.parse_endtag(i)</span>
+
+<span class="nn">/usr/lib/python3.10/html/parser.py</span> in <span class="ni">parse_starttag</span><span class="nt">(self, i)</span>
+<span class="g g-Whitespace">    </span><span class="mi">323</span><span class="s2">                 attrvalue = attrvalue[1:-1]</span>
+<span class="g g-Whitespace">    </span><span class="mi">324</span><span class="s2">             if attrvalue:</span>
+<span class="ne">--&gt; </span><span class="mi">325</span><span class="s2">                 attrvalue = unescape(attrvalue)</span>
+<span class="g g-Whitespace">    </span><span class="mi">326</span><span class="s2">             attrs.append((attrname.lower(), attrvalue))</span>
+<span class="g g-Whitespace">    </span><span class="mi">327</span><span class="s2">             k = m.end()</span>
+
+<span class="nn">/usr/lib/python3.10/html/__init__.py</span> in <span class="ni">unescape</span><span class="nt">(s)</span>
+<span class="g g-Whitespace">    </span><span class="mi">130</span><span class="s2">     if &#39;&amp;&#39; not in s:</span>
+<span class="g g-Whitespace">    </span><span class="mi">131</span><span class="s2">         return s</span>
+<span class="ne">--&gt; </span><span class="mi">132</span><span class="s2">     return _charref.sub(_replace_charref, s)</span>
+
+<span class="nn">/usr/lib/python3.10/html/__init__.py</span> in <span class="ni">_replace_charref</span><span class="nt">(s)</span>
+<span class="g g-Whitespace">    </span><span class="mi">109</span><span class="s2">             return _html5[s]</span>
+<span class="g g-Whitespace">    </span><span class="mi">110</span><span class="s2">         # find the longest matching name (as defined by the standard)</span>
+<span class="ne">--&gt; </span><span class="mi">111</span><span class="s2">         for x in range(len(s)-1, 1, -1):</span>
+<span class="g g-Whitespace">    </span><span class="mi">112</span><span class="s2">             if s[:x] in _html5:</span>
+<span class="g g-Whitespace">    </span><span class="mi">113</span><span class="s2">                 return _html5[s[:x]] + s[x:]</span>
+
+<span class="ne">KeyboardInterrupt</span>: 
 </pre></div>
 </div>
 </div>
@@ -1366,8 +1333,7 @@ Requirement already satisfied: soupsieve&gt;1.2 in /usr/local/lib/python3.10/dis
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><strong>UAS PPW</strong></a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#aplikasi-projek">Aplikasi Projek</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Crawling Data Uas</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#install-dan-import-library"><strong>Install dan Import Library</strong></a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#crawling-berita"><strong>Crawling Berita</strong></a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#otomotif">Otomotif</a></li>
