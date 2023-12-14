@@ -1,0 +1,2768 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Crawling data berita &#8212; My sample book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Crawlingdata';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="UAS PPW" href="CrawlingUAS.html" />
+    <link rel="prev" title="Notebooks with MyST Markdown" href="markdown-notebooks.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="My sample book - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="My sample book - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Welcome to your Jupyter Book
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="markdown.html">Markdown Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks.html">Content with notebooks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="markdown-notebooks.html">Notebooks with MyST Markdown</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Crawling data berita</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CrawlingUAS.html"><strong>UAS PPW</strong></a></li>
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="scrappingberita.html">Sraping Pada Berita</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Tugas3_LDA.html">LDA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="UAS.html">PROJECT AKHIR</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Uas.html">PROJECT AKHIR</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Uts.html">UTS</a></li>
+
+
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FCrawlingdata.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/Crawlingdata.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Crawling data berita</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="crawling-data-berita">
+<h1>Crawling data berita<a class="headerlink" href="#crawling-data-berita" title="Permalink to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>requests
+<span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>beautifulsoup4
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: requests in /usr/local/lib/python3.10/dist-packages (2.31.0)
+Requirement already satisfied: charset-normalizer&lt;4,&gt;=2 in /usr/local/lib/python3.10/dist-packages (from requests) (3.3.2)
+Requirement already satisfied: idna&lt;4,&gt;=2.5 in /usr/local/lib/python3.10/dist-packages (from requests) (3.6)
+Requirement already satisfied: urllib3&lt;3,&gt;=1.21.1 in /usr/local/lib/python3.10/dist-packages (from requests) (2.0.7)
+Requirement already satisfied: certifi&gt;=2017.4.17 in /usr/local/lib/python3.10/dist-packages (from requests) (2023.11.17)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: beautifulsoup4 in /usr/local/lib/python3.10/dist-packages (4.11.2)
+Requirement already satisfied: soupsieve&gt;1.2 in /usr/local/lib/python3.10/dist-packages (from beautifulsoup4) (2.5)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">google.colab</span> <span class="kn">import</span> <span class="n">drive</span>
+<span class="n">drive</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="s1">&#39;/content/drive&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">KeyboardInterrupt</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="nn">&lt;ipython-input-2-d5df0069828e&gt;</span> in <span class="ni">&lt;cell line: 2&gt;</span><span class="nt">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">google.colab</span> <span class="kn">import</span> <span class="n">drive</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">drive</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="s1">&#39;/content/drive&#39;</span><span class="p">)</span>
+
+<span class="nn">/usr/local/lib/python3.10/dist-packages/google/colab/drive.py</span> in <span class="ni">mount</span><span class="nt">(mountpoint, force_remount, timeout_ms, readonly)</span>
+<span class="g g-Whitespace">    </span><span class="mi">101</span> <span class="k">def</span> <span class="nf">mount</span><span class="p">(</span><span class="n">mountpoint</span><span class="p">,</span> <span class="n">force_remount</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">timeout_ms</span><span class="o">=</span><span class="mi">120000</span><span class="p">,</span> <span class="n">readonly</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">102</span><span class="w">   </span><span class="sd">&quot;&quot;&quot;Mount your Google Drive at the specified mountpoint path.&quot;&quot;&quot;</span>
+<span class="ne">--&gt; </span><span class="mi">103</span>   <span class="k">return</span> <span class="n">_mount</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">104</span>       <span class="n">mountpoint</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">105</span>       <span class="n">force_remount</span><span class="o">=</span><span class="n">force_remount</span><span class="p">,</span>
+
+<span class="nn">/usr/local/lib/python3.10/dist-packages/google/colab/drive.py</span> in <span class="ni">_mount</span><span class="nt">(mountpoint, force_remount, timeout_ms, ephemeral, readonly)</span>
+<span class="g g-Whitespace">    </span><span class="mi">130</span>   <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">131</span>   <span class="k">if</span> <span class="n">ephemeral</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">132</span>     <span class="n">_message</span><span class="o">.</span><span class="n">blocking_request</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">133</span>         <span class="s1">&#39;request_auth&#39;</span><span class="p">,</span> <span class="n">request</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;authType&#39;</span><span class="p">:</span> <span class="s1">&#39;dfs_ephemeral&#39;</span><span class="p">},</span> <span class="n">timeout_sec</span><span class="o">=</span><span class="kc">None</span>
+<span class="g g-Whitespace">    </span><span class="mi">134</span>     <span class="p">)</span>
+
+<span class="nn">/usr/local/lib/python3.10/dist-packages/google/colab/_message.py</span> in <span class="ni">blocking_request</span><span class="nt">(request_type, request, timeout_sec, parent)</span>
+<span class="g g-Whitespace">    </span><span class="mi">174</span>       <span class="n">request_type</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="n">parent</span><span class="p">,</span> <span class="n">expect_reply</span><span class="o">=</span><span class="kc">True</span>
+<span class="g g-Whitespace">    </span><span class="mi">175</span>   <span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">176</span>   <span class="k">return</span> <span class="n">read_reply_from_input</span><span class="p">(</span><span class="n">request_id</span><span class="p">,</span> <span class="n">timeout_sec</span><span class="p">)</span>
+
+<span class="nn">/usr/local/lib/python3.10/dist-packages/google/colab/_message.py</span> in <span class="ni">read_reply_from_input</span><span class="nt">(message_id, timeout_sec)</span>
+<span class="g g-Whitespace">     </span><span class="mi">94</span>     <span class="n">reply</span> <span class="o">=</span> <span class="n">_read_next_input_message</span><span class="p">()</span>
+<span class="g g-Whitespace">     </span><span class="mi">95</span>     <span class="k">if</span> <span class="n">reply</span> <span class="o">==</span> <span class="n">_NOT_READY</span> <span class="ow">or</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">reply</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
+<span class="ne">---&gt; </span><span class="mi">96</span>       <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.025</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">97</span>       <span class="k">continue</span>
+<span class="g g-Whitespace">     </span><span class="mi">98</span>     <span class="k">if</span> <span class="p">(</span>
+
+<span class="ne">KeyboardInterrupt</span>: 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">header</span><span class="o">=</span><span class="p">{</span>
+    <span class="s1">&#39;user-agent&#39;</span><span class="p">:</span><span class="s1">&#39;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36&#39;</span>
+<span class="p">}</span>
+
+<span class="n">linkberita</span> <span class="o">=</span> <span class="s1">&#39;https://www.liputan6.com/pemilu&#39;</span>
+<span class="n">listt</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">n</span> <span class="o">=</span> <span class="mi">5</span>
+
+<span class="k">for</span> <span class="n">page</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+  <span class="n">req</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">linkberita</span><span class="p">)</span>
+  <span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">req</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="s1">&#39;html.parser&#39;</span><span class="p">)</span>
+  <span class="n">items</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">findAll</span><span class="p">(</span><span class="s1">&#39;span class&#39;</span><span class="p">,</span> <span class="s1">&#39;header header--sumpah-pemuda clearfix&#39;</span><span class="p">)</span>
+  <span class="k">for</span> <span class="n">it</span> <span class="ow">in</span> <span class="n">items</span><span class="p">:</span>
+    <span class="n">link</span> <span class="o">=</span> <span class="n">it</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;article__link&#39;</span><span class="p">)[</span><span class="s1">&#39;href&#39;</span><span class="p">]</span>
+
+    <span class="n">req2</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">link</span><span class="p">)</span>
+    <span class="n">soup2</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">req2</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="s1">&#39;html.parser&#39;</span><span class="p">)</span>
+    <span class="n">judul</span> <span class="o">=</span> <span class="n">soup2</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;h1&#39;</span><span class="p">,</span> <span class="s1">&#39;read__title&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">text</span>
+    <span class="n">isi</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">soup2</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;div&#39;</span><span class="p">,</span> <span class="s1">&#39;read__content&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">judul</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">isi</span><span class="p">)</span>
+    <span class="n">listt</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">judul</span><span class="p">,</span> <span class="n">isi</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">listt</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Judul&#39;</span><span class="p">,</span> <span class="s1">&#39;Isi&#39;</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;berita6.csv&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Empty DataFrame
+Columns: [Judul, Isi]
+Index: []
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">nltk.tokenize</span> <span class="kn">import</span> <span class="n">word_tokenize</span>
+<span class="kn">from</span> <span class="nn">nltk.corpus</span> <span class="kn">import</span> <span class="n">stopwords</span>
+<span class="kn">from</span> <span class="nn">sklearn.feature_extraction.text</span> <span class="kn">import</span> <span class="n">TfidfVectorizer</span>
+<span class="kn">from</span> <span class="nn">sklearn.feature_extraction.text</span> <span class="kn">import</span> <span class="n">CountVectorizer</span>
+
+<span class="kn">import</span> <span class="nn">warnings</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">nltk</span>
+<span class="kn">import</span> <span class="nn">re</span>
+<span class="kn">import</span> <span class="nn">csv</span>
+
+<span class="n">nltk</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">&#39;stopwords&#39;</span><span class="p">)</span>
+<span class="n">nltk</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">&#39;punkt&#39;</span><span class="p">)</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[nltk_data] Downloading package stopwords to /root/nltk_data...
+[nltk_data]   Unzipping corpora/stopwords.zip.
+[nltk_data] Downloading package punkt to /root/nltk_data...
+[nltk_data]   Unzipping tokenizers/punkt.zip.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;https://raw.githubusercontent.com/elmatiaaa/uts_ppw/main/berita.csv&#39;</span><span class="p">)</span>
+<span class="n">df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-d0386ed0-95f5-4af8-8ed2-a44b71a981fb" class="colab-df-container">
+    <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Unnamed: 0</th>
+      <th>Judul</th>
+      <th>Isi</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table>
+</div>
+    <div class="colab-df-buttons">
+
+  <div class="colab-df-container">
+    <button class="colab-df-convert" onclick="convertToInteractive('df-d0386ed0-95f5-4af8-8ed2-a44b71a981fb')"
+            title="Convert this dataframe to an interactive table."
+            style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960">
+    <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"/>
+  </svg>
+    </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    .colab-df-buttons div {
+      margin-bottom: 4px;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+    <script>
+      const buttonEl =
+        document.querySelector('#df-d0386ed0-95f5-4af8-8ed2-a44b71a981fb button.colab-df-convert');
+      buttonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+      async function convertToInteractive(key) {
+        const element = document.querySelector('#df-d0386ed0-95f5-4af8-8ed2-a44b71a981fb');
+        const dataTable =
+          await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                    [key], {});
+        if (!dataTable) return;
+
+        const docLinkHtml = 'Like what you see? Visit the ' +
+          '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+          + ' to learn more about interactive tables.';
+        element.innerHTML = '';
+        dataTable['output_type'] = 'display_data';
+        await google.colab.output.renderOutput(dataTable, element);
+        const docLink = document.createElement('div');
+        docLink.innerHTML = docLinkHtml;
+        element.appendChild(docLink);
+      }
+    </script>
+  </div>
+
+    </div>
+  </div>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">cleaning</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+    <span class="c1"># Remove non-alphabetic characters (letters, spaces, and punctuation other than periods)</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;[^a-zA-Z\s.,]&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">text</span>
+
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;Cleaning&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Isi&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">cleaning</span><span class="p">)</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;Cleaning&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Series([], Name: Cleaning, dtype: object)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">nltk.tokenize</span> <span class="kn">import</span> <span class="n">sent_tokenize</span>
+<span class="c1"># Fungsi untuk mengekstrak artikel menjadi kalimat</span>
+<span class="k">def</span> <span class="nf">extract_sentences</span><span class="p">(</span><span class="n">article</span><span class="p">):</span>
+    <span class="n">sentences</span> <span class="o">=</span> <span class="n">sent_tokenize</span><span class="p">(</span><span class="n">article</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">sentences</span>
+
+<span class="c1"># Menerapkan fungsi extract_sentences ke setiap baris dalam kolom &#39;artikel&#39;</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;Kalimat&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Cleaning&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">extract_sentences</span><span class="p">)</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;Kalimat&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Series([], Name: Kalimat, dtype: object)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Kalimat&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">KeyError</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
+<span class="nn">/usr/local/lib/python3.10/dist-packages/pandas/core/indexes/base.py</span> in <span class="ni">get_loc</span><span class="nt">(self, key, method, tolerance)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3801</span>             <span class="k">try</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">3802</span>                 <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_engine</span><span class="o">.</span><span class="n">get_loc</span><span class="p">(</span><span class="n">casted_key</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3803</span>             <span class="k">except</span> <span class="ne">KeyError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+
+<span class="nn">/usr/local/lib/python3.10/dist-packages/pandas/_libs/index.pyx</span> in <span class="ni">pandas._libs.index.IndexEngine.get_loc</span><span class="nt">()</span>
+
+<span class="nn">/usr/local/lib/python3.10/dist-packages/pandas/_libs/index.pyx</span> in <span class="ni">pandas._libs.index.IndexEngine.get_loc</span><span class="nt">()</span>
+
+<span class="nn">pandas/_libs/hashtable_class_helper.pxi</span> in <span class="ni">pandas._libs.hashtable.PyObjectHashTable.get_item</span><span class="nt">()</span>
+
+<span class="nn">pandas/_libs/hashtable_class_helper.pxi</span> in <span class="ni">pandas._libs.hashtable.PyObjectHashTable.get_item</span><span class="nt">()</span>
+
+<span class="ne">KeyError</span>: &#39;Kalimat&#39;
+
+<span class="n">The</span> <span class="n">above</span> <span class="n">exception</span> <span class="n">was</span> <span class="n">the</span> <span class="n">direct</span> <span class="n">cause</span> <span class="n">of</span> <span class="n">the</span> <span class="n">following</span> <span class="n">exception</span><span class="p">:</span>
+
+<span class="ne">KeyError</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
+<span class="nn">&lt;ipython-input-16-6e54ecbec339&gt;</span> in <span class="ni">&lt;cell line: 1&gt;</span><span class="nt">()</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Kalimat&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="nn">/usr/local/lib/python3.10/dist-packages/pandas/core/frame.py</span> in <span class="ni">__getitem__</span><span class="nt">(self, key)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3805</span>             <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">nlevels</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">3806</span>                 <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_getitem_multilevel</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+<span class="ne">-&gt; </span><span class="mi">3807</span>             <span class="n">indexer</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">get_loc</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3808</span>             <span class="k">if</span> <span class="n">is_integer</span><span class="p">(</span><span class="n">indexer</span><span class="p">):</span>
+<span class="g g-Whitespace">   </span><span class="mi">3809</span>                 <span class="n">indexer</span> <span class="o">=</span> <span class="p">[</span><span class="n">indexer</span><span class="p">]</span>
+
+<span class="nn">/usr/local/lib/python3.10/dist-packages/pandas/core/indexes/base.py</span> in <span class="ni">get_loc</span><span class="nt">(self, key, method, tolerance)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3802</span>                 <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_engine</span><span class="o">.</span><span class="n">get_loc</span><span class="p">(</span><span class="n">casted_key</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3803</span>             <span class="k">except</span> <span class="ne">KeyError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">3804</span>                 <span class="k">raise</span> <span class="ne">KeyError</span><span class="p">(</span><span class="n">key</span><span class="p">)</span> <span class="kn">from</span> <span class="nn">err</span>
+<span class="g g-Whitespace">   </span><span class="mi">3805</span>             <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">3806</span>                 <span class="c1"># If we have a listlike key, _check_indexing_error will raise</span>
+
+<span class="ne">KeyError</span>: &#39;Kalimat&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.feature_extraction.text</span> <span class="kn">import</span> <span class="n">TfidfVectorizer</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;Dokumen&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Kalimat&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">sentences</span><span class="p">:</span> <span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">sentences</span><span class="p">))</span>
+<span class="n">tfidf_vectorizer</span> <span class="o">=</span> <span class="n">TfidfVectorizer</span><span class="p">()</span>
+<span class="n">tfidf_matrix</span> <span class="o">=</span> <span class="n">tfidf_vectorizer</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Dokumen&#39;</span><span class="p">])</span>
+<span class="n">tfidf_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">tfidf_matrix</span><span class="o">.</span><span class="n">toarray</span><span class="p">(),</span> <span class="n">columns</span><span class="o">=</span><span class="n">tfidf_vectorizer</span><span class="o">.</span><span class="n">get_feature_names_out</span><span class="p">())</span>
+<span class="n">tfidf_df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-d0edf526-b8ee-4cc1-ba2b-6799ecdf49c6" class="colab-df-container">
+    <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>abdul</th>
+      <th>acara</th>
+      <th>ada</th>
+      <th>adalah</th>
+      <th>adams</th>
+      <th>adanya</th>
+      <th>adapun</th>
+      <th>adha</th>
+      <th>adil</th>
+      <th>adili</th>
+      <th>...</th>
+      <th>ya</th>
+      <th>yakni</th>
+      <th>yang</th>
+      <th>yayasan</th>
+      <th>youtube</th>
+      <th>ypi</th>
+      <th>yudho</th>
+      <th>yudo</th>
+      <th>yusmic</th>
+      <th>zaytun</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>...</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.034586</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.018764</td>
+      <td>0.026129</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>...</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.083800</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>...</td>
+      <td>0.031247</td>
+      <td>0.000000</td>
+      <td>0.128167</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.018107</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>...</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.067390</td>
+      <td>0.082389</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.066116</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>...</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.047121</td>
+      <td>0.000000</td>
+      <td>0.043146</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>80</th>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.038585</td>
+      <td>0.000000</td>
+      <td>0.070127</td>
+      <td>0.0</td>
+      <td>0.021026</td>
+      <td>0.0</td>
+      <td>0.035063</td>
+      <td>0.035063</td>
+      <td>...</td>
+      <td>0.000000</td>
+      <td>0.021026</td>
+      <td>0.153175</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.035063</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>81</th>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.010172</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>...</td>
+      <td>0.000000</td>
+      <td>0.016629</td>
+      <td>0.015143</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.138658</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>82</th>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.077688</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.025400</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>...</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.080957</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>83</th>
+      <td>0.0</td>
+      <td>0.043604</td>
+      <td>0.015995</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>...</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.059527</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>84</th>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.040320</td>
+      <td>0.018715</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.021971</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>...</td>
+      <td>0.000000</td>
+      <td>0.021971</td>
+      <td>0.110042</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+    </tr>
+  </tbody>
+</table>
+<p>85 rows × 1761 columns</p>
+</div>
+    <div class="colab-df-buttons">
+
+  <div class="colab-df-container">
+    <button class="colab-df-convert" onclick="convertToInteractive('df-d0edf526-b8ee-4cc1-ba2b-6799ecdf49c6')"
+            title="Convert this dataframe to an interactive table."
+            style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960">
+    <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"/>
+  </svg>
+    </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    .colab-df-buttons div {
+      margin-bottom: 4px;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+    <script>
+      const buttonEl =
+        document.querySelector('#df-d0edf526-b8ee-4cc1-ba2b-6799ecdf49c6 button.colab-df-convert');
+      buttonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+      async function convertToInteractive(key) {
+        const element = document.querySelector('#df-d0edf526-b8ee-4cc1-ba2b-6799ecdf49c6');
+        const dataTable =
+          await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                    [key], {});
+        if (!dataTable) return;
+
+        const docLinkHtml = 'Like what you see? Visit the ' +
+          '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+          + ' to learn more about interactive tables.';
+        element.innerHTML = '';
+        dataTable['output_type'] = 'display_data';
+        await google.colab.output.renderOutput(dataTable, element);
+        const docLink = document.createElement('div');
+        docLink.innerHTML = docLinkHtml;
+        element.appendChild(docLink);
+      }
+    </script>
+  </div>
+
+
+<div id="df-a8b8f00b-b758-4c76-a5bb-095b46b0ab76">
+  <button class="colab-df-quickchart" onclick="quickchart('df-a8b8f00b-b758-4c76-a5bb-095b46b0ab76')"
+            title="Suggest charts."
+            style="display:none;">
+
+<svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+     width="24px">
+    <g>
+        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
+    </g>
+</svg>
+  </button>
+
+<style>
+  .colab-df-quickchart {
+      --bg-color: #E8F0FE;
+      --fill-color: #1967D2;
+      --hover-bg-color: #E2EBFA;
+      --hover-fill-color: #174EA6;
+      --disabled-fill-color: #AAA;
+      --disabled-bg-color: #DDD;
+  }
+
+  [theme=dark] .colab-df-quickchart {
+      --bg-color: #3B4455;
+      --fill-color: #D2E3FC;
+      --hover-bg-color: #434B5C;
+      --hover-fill-color: #FFFFFF;
+      --disabled-bg-color: #3B4455;
+      --disabled-fill-color: #666;
+  }
+
+  .colab-df-quickchart {
+    background-color: var(--bg-color);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    fill: var(--fill-color);
+    height: 32px;
+    padding: 0;
+    width: 32px;
+  }
+
+  .colab-df-quickchart:hover {
+    background-color: var(--hover-bg-color);
+    box-shadow: 0 1px 2px rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+    fill: var(--button-hover-fill-color);
+  }
+
+  .colab-df-quickchart-complete:disabled,
+  .colab-df-quickchart-complete:disabled:hover {
+    background-color: var(--disabled-bg-color);
+    fill: var(--disabled-fill-color);
+    box-shadow: none;
+  }
+
+  .colab-df-spinner {
+    border: 2px solid var(--fill-color);
+    border-color: transparent;
+    border-bottom-color: var(--fill-color);
+    animation:
+      spin 1s steps(1) infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+      border-left-color: var(--fill-color);
+    }
+    20% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    30% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+      border-right-color: var(--fill-color);
+    }
+    40% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    60% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+    }
+    80% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-bottom-color: var(--fill-color);
+    }
+    90% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+    }
+  }
+</style>
+
+  <script>
+    async function quickchart(key) {
+      const quickchartButtonEl =
+        document.querySelector('#' + key + ' button');
+      quickchartButtonEl.disabled = true;  // To prevent multiple clicks.
+      quickchartButtonEl.classList.add('colab-df-spinner');
+      try {
+        const charts = await google.colab.kernel.invokeFunction(
+            'suggestCharts', [key], {});
+      } catch (error) {
+        console.error('Error during call to suggestCharts:', error);
+      }
+      quickchartButtonEl.classList.remove('colab-df-spinner');
+      quickchartButtonEl.classList.add('colab-df-quickchart-complete');
+    }
+    (() => {
+      let quickchartButtonEl =
+        document.querySelector('#df-a8b8f00b-b758-4c76-a5bb-095b46b0ab76 button');
+      quickchartButtonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+    })();
+  </script>
+</div>
+    </div>
+  </div>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Menyimpan hasilnya ke dalam file CSV baru</span>
+<span class="n">output_file_path</span> <span class="o">=</span> <span class="s1">&#39;berita_dalam_kalimat1.csv&#39;</span>
+<span class="n">df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">output_file_path</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># import library untuk menghitung cosinus similarity</span>
+
+<span class="kn">from</span> <span class="nn">sklearn.metrics.pairwise</span> <span class="kn">import</span> <span class="n">cosine_similarity</span>
+<span class="kn">from</span> <span class="nn">sklearn.feature_extraction.text</span> <span class="kn">import</span> <span class="n">TfidfVectorizer</span>
+<span class="kn">import</span> <span class="nn">networkx</span> <span class="k">as</span> <span class="nn">nx</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.metrics.pairwise</span> <span class="kn">import</span> <span class="n">cosine_similarity</span>
+<span class="n">len_kalimat</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Dokumen&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">temp</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">node</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">len_kalimat</span><span class="p">):</span>
+  <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">len_kalimat</span> <span class="o">-</span> <span class="n">i</span><span class="p">):</span>
+    <span class="n">tfidf_vectorizer</span> <span class="o">=</span> <span class="n">TfidfVectorizer</span><span class="p">()</span>
+    <span class="n">tfidf_matrix</span> <span class="o">=</span> <span class="n">tfidf_vectorizer</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">([</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Dokumen&#39;</span><span class="p">][</span><span class="n">i</span><span class="p">],</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Dokumen&#39;</span><span class="p">][</span><span class="n">i</span><span class="o">+</span><span class="n">j</span><span class="p">]])</span>
+    <span class="n">cosine_sim</span> <span class="o">=</span> <span class="n">cosine_similarity</span><span class="p">(</span><span class="n">tfidf_matrix</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">tfidf_matrix</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+    <span class="n">similarity_score</span> <span class="o">=</span> <span class="n">cosine_sim</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">temp</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="s2">&quot;node-</span><span class="si">{}</span><span class="s2"> </span><span class="si">{}</span><span class="s2">&amp;</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">i</span><span class="o">+</span><span class="n">j</span><span class="p">),</span> <span class="n">similarity_score</span><span class="p">])</span>
+    <span class="n">node</span> <span class="o">+=</span><span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">temp</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[&#39;node-0 0&amp;0&#39;, 1.0],
+ [&#39;node-1 0&amp;1&#39;, 0.19975901870192447],
+ [&#39;node-2 0&amp;2&#39;, 0.1162457446546247],
+ [&#39;node-3 0&amp;3&#39;, 0.21826966833506753],
+ [&#39;node-4 0&amp;4&#39;, 0.13367962282947807],
+ [&#39;node-5 0&amp;5&#39;, 0.19168720540302442],
+ [&#39;node-6 0&amp;6&#39;, 0.11328484155941032],
+ [&#39;node-7 0&amp;7&#39;, 0.19564446071418573],
+ [&#39;node-8 0&amp;8&#39;, 0.09379047475434896],
+ [&#39;node-9 0&amp;9&#39;, 0.16862558422888],
+ [&#39;node-10 0&amp;10&#39;, 0.2301133894931891],
+ [&#39;node-11 0&amp;11&#39;, 0.1829125521763617],
+ [&#39;node-12 0&amp;12&#39;, 0.15961176783742326],
+ [&#39;node-13 0&amp;13&#39;, 0.08945158223949382],
+ [&#39;node-14 0&amp;14&#39;, 0.19390768433124625],
+ [&#39;node-15 0&amp;15&#39;, 0.17530173652253925],
+ [&#39;node-16 0&amp;16&#39;, 0.18908529529621057],
+ [&#39;node-17 0&amp;17&#39;, 1.0],
+ [&#39;node-18 0&amp;18&#39;, 0.19975901870192447],
+ [&#39;node-19 0&amp;19&#39;, 0.1162457446546247],
+ [&#39;node-20 0&amp;20&#39;, 0.21826966833506753],
+ [&#39;node-21 0&amp;21&#39;, 0.13367962282947807],
+ [&#39;node-22 0&amp;22&#39;, 0.19168720540302442],
+ [&#39;node-23 0&amp;23&#39;, 0.11328484155941032],
+ [&#39;node-24 0&amp;24&#39;, 0.19564446071418573],
+ [&#39;node-25 0&amp;25&#39;, 0.09379047475434896],
+ [&#39;node-26 0&amp;26&#39;, 0.16862558422888],
+ [&#39;node-27 0&amp;27&#39;, 0.2301133894931891],
+ [&#39;node-28 0&amp;28&#39;, 0.1829125521763617],
+ [&#39;node-29 0&amp;29&#39;, 0.15961176783742326],
+ [&#39;node-30 0&amp;30&#39;, 0.08945158223949382],
+ [&#39;node-31 0&amp;31&#39;, 0.19390768433124625],
+ [&#39;node-32 0&amp;32&#39;, 0.17530173652253925],
+ [&#39;node-33 0&amp;33&#39;, 0.18908529529621057],
+ [&#39;node-34 0&amp;34&#39;, 1.0],
+ [&#39;node-35 0&amp;35&#39;, 0.19975901870192447],
+ [&#39;node-36 0&amp;36&#39;, 0.1162457446546247],
+ [&#39;node-37 0&amp;37&#39;, 0.21826966833506753],
+ [&#39;node-38 0&amp;38&#39;, 0.13367962282947807],
+ [&#39;node-39 0&amp;39&#39;, 0.19168720540302442],
+ [&#39;node-40 0&amp;40&#39;, 0.11328484155941032],
+ [&#39;node-41 0&amp;41&#39;, 0.19564446071418573],
+ [&#39;node-42 0&amp;42&#39;, 0.09379047475434896],
+ [&#39;node-43 0&amp;43&#39;, 0.16862558422888],
+ [&#39;node-44 0&amp;44&#39;, 0.2301133894931891],
+ [&#39;node-45 0&amp;45&#39;, 0.1829125521763617],
+ [&#39;node-46 0&amp;46&#39;, 0.15961176783742326],
+ [&#39;node-47 0&amp;47&#39;, 0.08945158223949382],
+ [&#39;node-48 0&amp;48&#39;, 0.19390768433124625],
+ [&#39;node-49 0&amp;49&#39;, 0.17530173652253925],
+ [&#39;node-50 0&amp;50&#39;, 0.18908529529621057],
+ [&#39;node-51 0&amp;51&#39;, 1.0],
+ [&#39;node-52 0&amp;52&#39;, 0.19975901870192447],
+ [&#39;node-53 0&amp;53&#39;, 0.1162457446546247],
+ [&#39;node-54 0&amp;54&#39;, 0.21826966833506753],
+ [&#39;node-55 0&amp;55&#39;, 0.13367962282947807],
+ [&#39;node-56 0&amp;56&#39;, 0.19168720540302442],
+ [&#39;node-57 0&amp;57&#39;, 0.11328484155941032],
+ [&#39;node-58 0&amp;58&#39;, 0.19564446071418573],
+ [&#39;node-59 0&amp;59&#39;, 0.09379047475434896],
+ [&#39;node-60 0&amp;60&#39;, 0.16862558422888],
+ [&#39;node-61 0&amp;61&#39;, 0.2301133894931891],
+ [&#39;node-62 0&amp;62&#39;, 0.1829125521763617],
+ [&#39;node-63 0&amp;63&#39;, 0.15961176783742326],
+ [&#39;node-64 0&amp;64&#39;, 0.08945158223949382],
+ [&#39;node-65 0&amp;65&#39;, 0.19390768433124625],
+ [&#39;node-66 0&amp;66&#39;, 0.17530173652253925],
+ [&#39;node-67 0&amp;67&#39;, 0.18908529529621057],
+ [&#39;node-68 0&amp;68&#39;, 1.0],
+ [&#39;node-69 0&amp;69&#39;, 0.19975901870192447],
+ [&#39;node-70 0&amp;70&#39;, 0.1162457446546247],
+ [&#39;node-71 0&amp;71&#39;, 0.21826966833506753],
+ [&#39;node-72 0&amp;72&#39;, 0.13367962282947807],
+ [&#39;node-73 0&amp;73&#39;, 0.19168720540302442],
+ [&#39;node-74 0&amp;74&#39;, 0.11328484155941032],
+ [&#39;node-75 0&amp;75&#39;, 0.19564446071418573],
+ [&#39;node-76 0&amp;76&#39;, 0.09379047475434896],
+ [&#39;node-77 0&amp;77&#39;, 0.16862558422888],
+ [&#39;node-78 0&amp;78&#39;, 0.2301133894931891],
+ [&#39;node-79 0&amp;79&#39;, 0.1829125521763617],
+ [&#39;node-80 0&amp;80&#39;, 0.15961176783742326],
+ [&#39;node-81 0&amp;81&#39;, 0.08945158223949382],
+ [&#39;node-82 0&amp;82&#39;, 0.19390768433124625],
+ [&#39;node-83 0&amp;83&#39;, 0.17530173652253925],
+ [&#39;node-84 0&amp;84&#39;, 0.18908529529621057],
+ [&#39;node-85 1&amp;1&#39;, 0.9999999999999998],
+ [&#39;node-86 1&amp;2&#39;, 0.13449970699268185],
+ [&#39;node-87 1&amp;3&#39;, 0.7639086338176883],
+ [&#39;node-88 1&amp;4&#39;, 0.14543566213657746],
+ [&#39;node-89 1&amp;5&#39;, 0.16840447589867286],
+ [&#39;node-90 1&amp;6&#39;, 0.11111341802773496],
+ [&#39;node-91 1&amp;7&#39;, 0.16748043310232102],
+ [&#39;node-92 1&amp;8&#39;, 0.12059158477880916],
+ [&#39;node-93 1&amp;9&#39;, 0.19540056006198464],
+ [&#39;node-94 1&amp;10&#39;, 0.2101501305833557],
+ [&#39;node-95 1&amp;11&#39;, 0.1473159081961478],
+ [&#39;node-96 1&amp;12&#39;, 0.17318237912488674],
+ [&#39;node-97 1&amp;13&#39;, 0.1086723047593704],
+ [&#39;node-98 1&amp;14&#39;, 0.26505850775630285],
+ [&#39;node-99 1&amp;15&#39;, 0.16379023457870748],
+ [&#39;node-100 1&amp;16&#39;, 0.24615000517978256],
+ [&#39;node-101 1&amp;17&#39;, 0.19975901870192428],
+ [&#39;node-102 1&amp;18&#39;, 0.9999999999999998],
+ [&#39;node-103 1&amp;19&#39;, 0.13449970699268185],
+ [&#39;node-104 1&amp;20&#39;, 0.7639086338176883],
+ [&#39;node-105 1&amp;21&#39;, 0.14543566213657746],
+ [&#39;node-106 1&amp;22&#39;, 0.16840447589867286],
+ [&#39;node-107 1&amp;23&#39;, 0.11111341802773496],
+ [&#39;node-108 1&amp;24&#39;, 0.16748043310232102],
+ [&#39;node-109 1&amp;25&#39;, 0.12059158477880916],
+ [&#39;node-110 1&amp;26&#39;, 0.19540056006198464],
+ [&#39;node-111 1&amp;27&#39;, 0.2101501305833557],
+ [&#39;node-112 1&amp;28&#39;, 0.1473159081961478],
+ [&#39;node-113 1&amp;29&#39;, 0.17318237912488674],
+ [&#39;node-114 1&amp;30&#39;, 0.1086723047593704],
+ [&#39;node-115 1&amp;31&#39;, 0.26505850775630285],
+ [&#39;node-116 1&amp;32&#39;, 0.16379023457870748],
+ [&#39;node-117 1&amp;33&#39;, 0.24615000517978256],
+ [&#39;node-118 1&amp;34&#39;, 0.19975901870192428],
+ [&#39;node-119 1&amp;35&#39;, 0.9999999999999998],
+ [&#39;node-120 1&amp;36&#39;, 0.13449970699268185],
+ [&#39;node-121 1&amp;37&#39;, 0.7639086338176883],
+ [&#39;node-122 1&amp;38&#39;, 0.14543566213657746],
+ [&#39;node-123 1&amp;39&#39;, 0.16840447589867286],
+ [&#39;node-124 1&amp;40&#39;, 0.11111341802773496],
+ [&#39;node-125 1&amp;41&#39;, 0.16748043310232102],
+ [&#39;node-126 1&amp;42&#39;, 0.12059158477880916],
+ [&#39;node-127 1&amp;43&#39;, 0.19540056006198464],
+ [&#39;node-128 1&amp;44&#39;, 0.2101501305833557],
+ [&#39;node-129 1&amp;45&#39;, 0.1473159081961478],
+ [&#39;node-130 1&amp;46&#39;, 0.17318237912488674],
+ [&#39;node-131 1&amp;47&#39;, 0.1086723047593704],
+ [&#39;node-132 1&amp;48&#39;, 0.26505850775630285],
+ [&#39;node-133 1&amp;49&#39;, 0.16379023457870748],
+ [&#39;node-134 1&amp;50&#39;, 0.24615000517978256],
+ [&#39;node-135 1&amp;51&#39;, 0.19975901870192428],
+ [&#39;node-136 1&amp;52&#39;, 0.9999999999999998],
+ [&#39;node-137 1&amp;53&#39;, 0.13449970699268185],
+ [&#39;node-138 1&amp;54&#39;, 0.7639086338176883],
+ [&#39;node-139 1&amp;55&#39;, 0.14543566213657746],
+ [&#39;node-140 1&amp;56&#39;, 0.16840447589867286],
+ [&#39;node-141 1&amp;57&#39;, 0.11111341802773496],
+ [&#39;node-142 1&amp;58&#39;, 0.16748043310232102],
+ [&#39;node-143 1&amp;59&#39;, 0.12059158477880916],
+ [&#39;node-144 1&amp;60&#39;, 0.19540056006198464],
+ [&#39;node-145 1&amp;61&#39;, 0.2101501305833557],
+ [&#39;node-146 1&amp;62&#39;, 0.1473159081961478],
+ [&#39;node-147 1&amp;63&#39;, 0.17318237912488674],
+ [&#39;node-148 1&amp;64&#39;, 0.1086723047593704],
+ [&#39;node-149 1&amp;65&#39;, 0.26505850775630285],
+ [&#39;node-150 1&amp;66&#39;, 0.16379023457870748],
+ [&#39;node-151 1&amp;67&#39;, 0.24615000517978256],
+ [&#39;node-152 1&amp;68&#39;, 0.19975901870192428],
+ [&#39;node-153 1&amp;69&#39;, 0.9999999999999998],
+ [&#39;node-154 1&amp;70&#39;, 0.13449970699268185],
+ [&#39;node-155 1&amp;71&#39;, 0.7639086338176883],
+ [&#39;node-156 1&amp;72&#39;, 0.14543566213657746],
+ [&#39;node-157 1&amp;73&#39;, 0.16840447589867286],
+ [&#39;node-158 1&amp;74&#39;, 0.11111341802773496],
+ [&#39;node-159 1&amp;75&#39;, 0.16748043310232102],
+ [&#39;node-160 1&amp;76&#39;, 0.12059158477880916],
+ [&#39;node-161 1&amp;77&#39;, 0.19540056006198464],
+ [&#39;node-162 1&amp;78&#39;, 0.2101501305833557],
+ [&#39;node-163 1&amp;79&#39;, 0.1473159081961478],
+ [&#39;node-164 1&amp;80&#39;, 0.17318237912488674],
+ [&#39;node-165 1&amp;81&#39;, 0.1086723047593704],
+ [&#39;node-166 1&amp;82&#39;, 0.26505850775630285],
+ [&#39;node-167 1&amp;83&#39;, 0.16379023457870748],
+ [&#39;node-168 1&amp;84&#39;, 0.24615000517978256],
+ [&#39;node-169 2&amp;2&#39;, 1.0],
+ [&#39;node-170 2&amp;3&#39;, 0.13127805132730505],
+ [&#39;node-171 2&amp;4&#39;, 0.11848941431375135],
+ [&#39;node-172 2&amp;5&#39;, 0.640670268524152],
+ [&#39;node-173 2&amp;6&#39;, 0.13488937198285125],
+ [&#39;node-174 2&amp;7&#39;, 0.5109263979832968],
+ [&#39;node-175 2&amp;8&#39;, 0.10838698624189799],
+ [&#39;node-176 2&amp;9&#39;, 0.11481042056295557],
+ [&#39;node-177 2&amp;10&#39;, 0.09660001280636644],
+ [&#39;node-178 2&amp;11&#39;, 0.10484261274488045],
+ [&#39;node-179 2&amp;12&#39;, 0.1474475025037804],
+ [&#39;node-180 2&amp;13&#39;, 0.0749180769645184],
+ [&#39;node-181 2&amp;14&#39;, 0.1488265224584756],
+ [&#39;node-182 2&amp;15&#39;, 0.13760663997037748],
+ [&#39;node-183 2&amp;16&#39;, 0.15823778902053612],
+ [&#39;node-184 2&amp;17&#39;, 0.11624574465462459],
+ [&#39;node-185 2&amp;18&#39;, 0.1344997069926819],
+ [&#39;node-186 2&amp;19&#39;, 1.0],
+ [&#39;node-187 2&amp;20&#39;, 0.13127805132730505],
+ [&#39;node-188 2&amp;21&#39;, 0.11848941431375135],
+ [&#39;node-189 2&amp;22&#39;, 0.640670268524152],
+ [&#39;node-190 2&amp;23&#39;, 0.13488937198285125],
+ [&#39;node-191 2&amp;24&#39;, 0.5109263979832968],
+ [&#39;node-192 2&amp;25&#39;, 0.10838698624189799],
+ [&#39;node-193 2&amp;26&#39;, 0.11481042056295557],
+ [&#39;node-194 2&amp;27&#39;, 0.09660001280636644],
+ [&#39;node-195 2&amp;28&#39;, 0.10484261274488045],
+ [&#39;node-196 2&amp;29&#39;, 0.1474475025037804],
+ [&#39;node-197 2&amp;30&#39;, 0.0749180769645184],
+ [&#39;node-198 2&amp;31&#39;, 0.1488265224584756],
+ [&#39;node-199 2&amp;32&#39;, 0.13760663997037748],
+ [&#39;node-200 2&amp;33&#39;, 0.15823778902053612],
+ [&#39;node-201 2&amp;34&#39;, 0.11624574465462459],
+ [&#39;node-202 2&amp;35&#39;, 0.1344997069926819],
+ [&#39;node-203 2&amp;36&#39;, 1.0],
+ [&#39;node-204 2&amp;37&#39;, 0.13127805132730505],
+ [&#39;node-205 2&amp;38&#39;, 0.11848941431375135],
+ [&#39;node-206 2&amp;39&#39;, 0.640670268524152],
+ [&#39;node-207 2&amp;40&#39;, 0.13488937198285125],
+ [&#39;node-208 2&amp;41&#39;, 0.5109263979832968],
+ [&#39;node-209 2&amp;42&#39;, 0.10838698624189799],
+ [&#39;node-210 2&amp;43&#39;, 0.11481042056295557],
+ [&#39;node-211 2&amp;44&#39;, 0.09660001280636644],
+ [&#39;node-212 2&amp;45&#39;, 0.10484261274488045],
+ [&#39;node-213 2&amp;46&#39;, 0.1474475025037804],
+ [&#39;node-214 2&amp;47&#39;, 0.0749180769645184],
+ [&#39;node-215 2&amp;48&#39;, 0.1488265224584756],
+ [&#39;node-216 2&amp;49&#39;, 0.13760663997037748],
+ [&#39;node-217 2&amp;50&#39;, 0.15823778902053612],
+ [&#39;node-218 2&amp;51&#39;, 0.11624574465462459],
+ [&#39;node-219 2&amp;52&#39;, 0.1344997069926819],
+ [&#39;node-220 2&amp;53&#39;, 1.0],
+ [&#39;node-221 2&amp;54&#39;, 0.13127805132730505],
+ [&#39;node-222 2&amp;55&#39;, 0.11848941431375135],
+ [&#39;node-223 2&amp;56&#39;, 0.640670268524152],
+ [&#39;node-224 2&amp;57&#39;, 0.13488937198285125],
+ [&#39;node-225 2&amp;58&#39;, 0.5109263979832968],
+ [&#39;node-226 2&amp;59&#39;, 0.10838698624189799],
+ [&#39;node-227 2&amp;60&#39;, 0.11481042056295557],
+ [&#39;node-228 2&amp;61&#39;, 0.09660001280636644],
+ [&#39;node-229 2&amp;62&#39;, 0.10484261274488045],
+ [&#39;node-230 2&amp;63&#39;, 0.1474475025037804],
+ [&#39;node-231 2&amp;64&#39;, 0.0749180769645184],
+ [&#39;node-232 2&amp;65&#39;, 0.1488265224584756],
+ [&#39;node-233 2&amp;66&#39;, 0.13760663997037748],
+ [&#39;node-234 2&amp;67&#39;, 0.15823778902053612],
+ [&#39;node-235 2&amp;68&#39;, 0.11624574465462459],
+ [&#39;node-236 2&amp;69&#39;, 0.1344997069926819],
+ [&#39;node-237 2&amp;70&#39;, 1.0],
+ [&#39;node-238 2&amp;71&#39;, 0.13127805132730505],
+ [&#39;node-239 2&amp;72&#39;, 0.11848941431375135],
+ [&#39;node-240 2&amp;73&#39;, 0.640670268524152],
+ [&#39;node-241 2&amp;74&#39;, 0.13488937198285125],
+ [&#39;node-242 2&amp;75&#39;, 0.5109263979832968],
+ [&#39;node-243 2&amp;76&#39;, 0.10838698624189799],
+ [&#39;node-244 2&amp;77&#39;, 0.11481042056295557],
+ [&#39;node-245 2&amp;78&#39;, 0.09660001280636644],
+ [&#39;node-246 2&amp;79&#39;, 0.10484261274488045],
+ [&#39;node-247 2&amp;80&#39;, 0.1474475025037804],
+ [&#39;node-248 2&amp;81&#39;, 0.0749180769645184],
+ [&#39;node-249 2&amp;82&#39;, 0.1488265224584756],
+ [&#39;node-250 2&amp;83&#39;, 0.13760663997037748],
+ [&#39;node-251 2&amp;84&#39;, 0.15823778902053612],
+ [&#39;node-252 3&amp;3&#39;, 1.0000000000000002],
+ [&#39;node-253 3&amp;4&#39;, 0.1632129441468587],
+ [&#39;node-254 3&amp;5&#39;, 0.1817438227816321],
+ [&#39;node-255 3&amp;6&#39;, 0.12333933360906066],
+ [&#39;node-256 3&amp;7&#39;, 0.18541103792418298],
+ [&#39;node-257 3&amp;8&#39;, 0.13429858730797145],
+ [&#39;node-258 3&amp;9&#39;, 0.21237984766089496],
+ [&#39;node-259 3&amp;10&#39;, 0.2638173887400684],
+ [&#39;node-260 3&amp;11&#39;, 0.15237683326444623],
+ [&#39;node-261 3&amp;12&#39;, 0.18474379213966854],
+ [&#39;node-262 3&amp;13&#39;, 0.11345132824815816],
+ [&#39;node-263 3&amp;14&#39;, 0.2692234475951723],
+ [&#39;node-264 3&amp;15&#39;, 0.1800825877189836],
+ [&#39;node-265 3&amp;16&#39;, 0.23951613061323485],
+ [&#39;node-266 3&amp;17&#39;, 0.2182696683350676],
+ [&#39;node-267 3&amp;18&#39;, 0.7639086338176893],
+ [&#39;node-268 3&amp;19&#39;, 0.13127805132730505],
+ [&#39;node-269 3&amp;20&#39;, 1.0000000000000002],
+ [&#39;node-270 3&amp;21&#39;, 0.1632129441468587],
+ [&#39;node-271 3&amp;22&#39;, 0.1817438227816321],
+ [&#39;node-272 3&amp;23&#39;, 0.12333933360906066],
+ [&#39;node-273 3&amp;24&#39;, 0.18541103792418298],
+ [&#39;node-274 3&amp;25&#39;, 0.13429858730797145],
+ [&#39;node-275 3&amp;26&#39;, 0.21237984766089496],
+ [&#39;node-276 3&amp;27&#39;, 0.2638173887400684],
+ [&#39;node-277 3&amp;28&#39;, 0.15237683326444623],
+ [&#39;node-278 3&amp;29&#39;, 0.18474379213966854],
+ [&#39;node-279 3&amp;30&#39;, 0.11345132824815816],
+ [&#39;node-280 3&amp;31&#39;, 0.2692234475951723],
+ [&#39;node-281 3&amp;32&#39;, 0.1800825877189836],
+ [&#39;node-282 3&amp;33&#39;, 0.23951613061323485],
+ [&#39;node-283 3&amp;34&#39;, 0.2182696683350676],
+ [&#39;node-284 3&amp;35&#39;, 0.7639086338176893],
+ [&#39;node-285 3&amp;36&#39;, 0.13127805132730505],
+ [&#39;node-286 3&amp;37&#39;, 1.0000000000000002],
+ [&#39;node-287 3&amp;38&#39;, 0.1632129441468587],
+ [&#39;node-288 3&amp;39&#39;, 0.1817438227816321],
+ [&#39;node-289 3&amp;40&#39;, 0.12333933360906066],
+ [&#39;node-290 3&amp;41&#39;, 0.18541103792418298],
+ [&#39;node-291 3&amp;42&#39;, 0.13429858730797145],
+ [&#39;node-292 3&amp;43&#39;, 0.21237984766089496],
+ [&#39;node-293 3&amp;44&#39;, 0.2638173887400684],
+ [&#39;node-294 3&amp;45&#39;, 0.15237683326444623],
+ [&#39;node-295 3&amp;46&#39;, 0.18474379213966854],
+ [&#39;node-296 3&amp;47&#39;, 0.11345132824815816],
+ [&#39;node-297 3&amp;48&#39;, 0.2692234475951723],
+ [&#39;node-298 3&amp;49&#39;, 0.1800825877189836],
+ [&#39;node-299 3&amp;50&#39;, 0.23951613061323485],
+ [&#39;node-300 3&amp;51&#39;, 0.2182696683350676],
+ [&#39;node-301 3&amp;52&#39;, 0.7639086338176893],
+ [&#39;node-302 3&amp;53&#39;, 0.13127805132730505],
+ [&#39;node-303 3&amp;54&#39;, 1.0000000000000002],
+ [&#39;node-304 3&amp;55&#39;, 0.1632129441468587],
+ [&#39;node-305 3&amp;56&#39;, 0.1817438227816321],
+ [&#39;node-306 3&amp;57&#39;, 0.12333933360906066],
+ [&#39;node-307 3&amp;58&#39;, 0.18541103792418298],
+ [&#39;node-308 3&amp;59&#39;, 0.13429858730797145],
+ [&#39;node-309 3&amp;60&#39;, 0.21237984766089496],
+ [&#39;node-310 3&amp;61&#39;, 0.2638173887400684],
+ [&#39;node-311 3&amp;62&#39;, 0.15237683326444623],
+ [&#39;node-312 3&amp;63&#39;, 0.18474379213966854],
+ [&#39;node-313 3&amp;64&#39;, 0.11345132824815816],
+ [&#39;node-314 3&amp;65&#39;, 0.2692234475951723],
+ [&#39;node-315 3&amp;66&#39;, 0.1800825877189836],
+ [&#39;node-316 3&amp;67&#39;, 0.23951613061323485],
+ [&#39;node-317 3&amp;68&#39;, 0.2182696683350676],
+ [&#39;node-318 3&amp;69&#39;, 0.7639086338176893],
+ [&#39;node-319 3&amp;70&#39;, 0.13127805132730505],
+ [&#39;node-320 3&amp;71&#39;, 1.0000000000000002],
+ [&#39;node-321 3&amp;72&#39;, 0.1632129441468587],
+ [&#39;node-322 3&amp;73&#39;, 0.1817438227816321],
+ [&#39;node-323 3&amp;74&#39;, 0.12333933360906066],
+ [&#39;node-324 3&amp;75&#39;, 0.18541103792418298],
+ [&#39;node-325 3&amp;76&#39;, 0.13429858730797145],
+ [&#39;node-326 3&amp;77&#39;, 0.21237984766089496],
+ [&#39;node-327 3&amp;78&#39;, 0.2638173887400684],
+ [&#39;node-328 3&amp;79&#39;, 0.15237683326444623],
+ [&#39;node-329 3&amp;80&#39;, 0.18474379213966854],
+ [&#39;node-330 3&amp;81&#39;, 0.11345132824815816],
+ [&#39;node-331 3&amp;82&#39;, 0.2692234475951723],
+ [&#39;node-332 3&amp;83&#39;, 0.1800825877189836],
+ [&#39;node-333 3&amp;84&#39;, 0.23951613061323485],
+ [&#39;node-334 4&amp;4&#39;, 1.0000000000000004],
+ [&#39;node-335 4&amp;5&#39;, 0.11543175691448165],
+ [&#39;node-336 4&amp;6&#39;, 0.14285280085232618],
+ [&#39;node-337 4&amp;7&#39;, 0.12102931686639286],
+ [&#39;node-338 4&amp;8&#39;, 0.09285619495506102],
+ [&#39;node-339 4&amp;9&#39;, 0.13392680842446197],
+ [&#39;node-340 4&amp;10&#39;, 0.151036678635807],
+ [&#39;node-341 4&amp;11&#39;, 0.11791991617641906],
+ [&#39;node-342 4&amp;12&#39;, 0.18295605183678176],
+ [&#39;node-343 4&amp;13&#39;, 0.08499252602610921],
+ [&#39;node-344 4&amp;14&#39;, 0.18970517739743473],
+ [&#39;node-345 4&amp;15&#39;, 0.2543023610992019],
+ [&#39;node-346 4&amp;16&#39;, 0.17731237267987923],
+ [&#39;node-347 4&amp;17&#39;, 0.13367962282947804],
+ [&#39;node-348 4&amp;18&#39;, 0.14543566213657733],
+ [&#39;node-349 4&amp;19&#39;, 0.11848941431375128],
+ [&#39;node-350 4&amp;20&#39;, 0.16321294414685858],
+ [&#39;node-351 4&amp;21&#39;, 1.0000000000000004],
+ [&#39;node-352 4&amp;22&#39;, 0.11543175691448165],
+ [&#39;node-353 4&amp;23&#39;, 0.14285280085232618],
+ [&#39;node-354 4&amp;24&#39;, 0.12102931686639286],
+ [&#39;node-355 4&amp;25&#39;, 0.09285619495506102],
+ [&#39;node-356 4&amp;26&#39;, 0.13392680842446197],
+ [&#39;node-357 4&amp;27&#39;, 0.151036678635807],
+ [&#39;node-358 4&amp;28&#39;, 0.11791991617641906],
+ [&#39;node-359 4&amp;29&#39;, 0.18295605183678176],
+ [&#39;node-360 4&amp;30&#39;, 0.08499252602610921],
+ [&#39;node-361 4&amp;31&#39;, 0.18970517739743473],
+ [&#39;node-362 4&amp;32&#39;, 0.2543023610992019],
+ [&#39;node-363 4&amp;33&#39;, 0.17731237267987923],
+ [&#39;node-364 4&amp;34&#39;, 0.13367962282947804],
+ [&#39;node-365 4&amp;35&#39;, 0.14543566213657733],
+ [&#39;node-366 4&amp;36&#39;, 0.11848941431375128],
+ [&#39;node-367 4&amp;37&#39;, 0.16321294414685858],
+ [&#39;node-368 4&amp;38&#39;, 1.0000000000000004],
+ [&#39;node-369 4&amp;39&#39;, 0.11543175691448165],
+ [&#39;node-370 4&amp;40&#39;, 0.14285280085232618],
+ [&#39;node-371 4&amp;41&#39;, 0.12102931686639286],
+ [&#39;node-372 4&amp;42&#39;, 0.09285619495506102],
+ [&#39;node-373 4&amp;43&#39;, 0.13392680842446197],
+ [&#39;node-374 4&amp;44&#39;, 0.151036678635807],
+ [&#39;node-375 4&amp;45&#39;, 0.11791991617641906],
+ [&#39;node-376 4&amp;46&#39;, 0.18295605183678176],
+ [&#39;node-377 4&amp;47&#39;, 0.08499252602610921],
+ [&#39;node-378 4&amp;48&#39;, 0.18970517739743473],
+ [&#39;node-379 4&amp;49&#39;, 0.2543023610992019],
+ [&#39;node-380 4&amp;50&#39;, 0.17731237267987923],
+ [&#39;node-381 4&amp;51&#39;, 0.13367962282947804],
+ [&#39;node-382 4&amp;52&#39;, 0.14543566213657733],
+ [&#39;node-383 4&amp;53&#39;, 0.11848941431375128],
+ [&#39;node-384 4&amp;54&#39;, 0.16321294414685858],
+ [&#39;node-385 4&amp;55&#39;, 1.0000000000000004],
+ [&#39;node-386 4&amp;56&#39;, 0.11543175691448165],
+ [&#39;node-387 4&amp;57&#39;, 0.14285280085232618],
+ [&#39;node-388 4&amp;58&#39;, 0.12102931686639286],
+ [&#39;node-389 4&amp;59&#39;, 0.09285619495506102],
+ [&#39;node-390 4&amp;60&#39;, 0.13392680842446197],
+ [&#39;node-391 4&amp;61&#39;, 0.151036678635807],
+ [&#39;node-392 4&amp;62&#39;, 0.11791991617641906],
+ [&#39;node-393 4&amp;63&#39;, 0.18295605183678176],
+ [&#39;node-394 4&amp;64&#39;, 0.08499252602610921],
+ [&#39;node-395 4&amp;65&#39;, 0.18970517739743473],
+ [&#39;node-396 4&amp;66&#39;, 0.2543023610992019],
+ [&#39;node-397 4&amp;67&#39;, 0.17731237267987923],
+ [&#39;node-398 4&amp;68&#39;, 0.13367962282947804],
+ [&#39;node-399 4&amp;69&#39;, 0.14543566213657733],
+ [&#39;node-400 4&amp;70&#39;, 0.11848941431375128],
+ [&#39;node-401 4&amp;71&#39;, 0.16321294414685858],
+ [&#39;node-402 4&amp;72&#39;, 1.0000000000000004],
+ [&#39;node-403 4&amp;73&#39;, 0.11543175691448165],
+ [&#39;node-404 4&amp;74&#39;, 0.14285280085232618],
+ [&#39;node-405 4&amp;75&#39;, 0.12102931686639286],
+ [&#39;node-406 4&amp;76&#39;, 0.09285619495506102],
+ [&#39;node-407 4&amp;77&#39;, 0.13392680842446197],
+ [&#39;node-408 4&amp;78&#39;, 0.151036678635807],
+ [&#39;node-409 4&amp;79&#39;, 0.11791991617641906],
+ [&#39;node-410 4&amp;80&#39;, 0.18295605183678176],
+ [&#39;node-411 4&amp;81&#39;, 0.08499252602610921],
+ [&#39;node-412 4&amp;82&#39;, 0.18970517739743473],
+ [&#39;node-413 4&amp;83&#39;, 0.2543023610992019],
+ [&#39;node-414 4&amp;84&#39;, 0.17731237267987923],
+ [&#39;node-415 5&amp;5&#39;, 1.0000000000000004],
+ [&#39;node-416 5&amp;6&#39;, 0.1178128757360724],
+ [&#39;node-417 5&amp;7&#39;, 0.6610793135683067],
+ [&#39;node-418 5&amp;8&#39;, 0.12984372908941064],
+ [&#39;node-419 5&amp;9&#39;, 0.17341932558473308],
+ [&#39;node-420 5&amp;10&#39;, 0.16104336627135885],
+ [&#39;node-421 5&amp;11&#39;, 0.1686923178190831],
+ [&#39;node-422 5&amp;12&#39;, 0.1643350466727519],
+ [&#39;node-423 5&amp;13&#39;, 0.0849349026234825],
+ [&#39;node-424 5&amp;14&#39;, 0.1724041400869462],
+ [&#39;node-425 5&amp;15&#39;, 0.14911581036007734],
+ [&#39;node-426 5&amp;16&#39;, 0.19073320923724538],
+ [&#39;node-427 5&amp;17&#39;, 0.19168720540302464],
+ [&#39;node-428 5&amp;18&#39;, 0.16840447589867294],
+ [&#39;node-429 5&amp;19&#39;, 0.6406702685241514],
+ [&#39;node-430 5&amp;20&#39;, 0.18174382278163212],
+ [&#39;node-431 5&amp;21&#39;, 0.11543175691448171],
+ [&#39;node-432 5&amp;22&#39;, 1.0000000000000004],
+ [&#39;node-433 5&amp;23&#39;, 0.1178128757360724],
+ [&#39;node-434 5&amp;24&#39;, 0.6610793135683067],
+ [&#39;node-435 5&amp;25&#39;, 0.12984372908941064],
+ [&#39;node-436 5&amp;26&#39;, 0.17341932558473308],
+ [&#39;node-437 5&amp;27&#39;, 0.16104336627135885],
+ [&#39;node-438 5&amp;28&#39;, 0.1686923178190831],
+ [&#39;node-439 5&amp;29&#39;, 0.1643350466727519],
+ [&#39;node-440 5&amp;30&#39;, 0.0849349026234825],
+ [&#39;node-441 5&amp;31&#39;, 0.1724041400869462],
+ [&#39;node-442 5&amp;32&#39;, 0.14911581036007734],
+ [&#39;node-443 5&amp;33&#39;, 0.19073320923724538],
+ [&#39;node-444 5&amp;34&#39;, 0.19168720540302464],
+ [&#39;node-445 5&amp;35&#39;, 0.16840447589867294],
+ [&#39;node-446 5&amp;36&#39;, 0.6406702685241514],
+ [&#39;node-447 5&amp;37&#39;, 0.18174382278163212],
+ [&#39;node-448 5&amp;38&#39;, 0.11543175691448171],
+ [&#39;node-449 5&amp;39&#39;, 1.0000000000000004],
+ [&#39;node-450 5&amp;40&#39;, 0.1178128757360724],
+ [&#39;node-451 5&amp;41&#39;, 0.6610793135683067],
+ [&#39;node-452 5&amp;42&#39;, 0.12984372908941064],
+ [&#39;node-453 5&amp;43&#39;, 0.17341932558473308],
+ [&#39;node-454 5&amp;44&#39;, 0.16104336627135885],
+ [&#39;node-455 5&amp;45&#39;, 0.1686923178190831],
+ [&#39;node-456 5&amp;46&#39;, 0.1643350466727519],
+ [&#39;node-457 5&amp;47&#39;, 0.0849349026234825],
+ [&#39;node-458 5&amp;48&#39;, 0.1724041400869462],
+ [&#39;node-459 5&amp;49&#39;, 0.14911581036007734],
+ [&#39;node-460 5&amp;50&#39;, 0.19073320923724538],
+ [&#39;node-461 5&amp;51&#39;, 0.19168720540302464],
+ [&#39;node-462 5&amp;52&#39;, 0.16840447589867294],
+ [&#39;node-463 5&amp;53&#39;, 0.6406702685241514],
+ [&#39;node-464 5&amp;54&#39;, 0.18174382278163212],
+ [&#39;node-465 5&amp;55&#39;, 0.11543175691448171],
+ [&#39;node-466 5&amp;56&#39;, 1.0000000000000004],
+ [&#39;node-467 5&amp;57&#39;, 0.1178128757360724],
+ [&#39;node-468 5&amp;58&#39;, 0.6610793135683067],
+ [&#39;node-469 5&amp;59&#39;, 0.12984372908941064],
+ [&#39;node-470 5&amp;60&#39;, 0.17341932558473308],
+ [&#39;node-471 5&amp;61&#39;, 0.16104336627135885],
+ [&#39;node-472 5&amp;62&#39;, 0.1686923178190831],
+ [&#39;node-473 5&amp;63&#39;, 0.1643350466727519],
+ [&#39;node-474 5&amp;64&#39;, 0.0849349026234825],
+ [&#39;node-475 5&amp;65&#39;, 0.1724041400869462],
+ [&#39;node-476 5&amp;66&#39;, 0.14911581036007734],
+ [&#39;node-477 5&amp;67&#39;, 0.19073320923724538],
+ [&#39;node-478 5&amp;68&#39;, 0.19168720540302464],
+ [&#39;node-479 5&amp;69&#39;, 0.16840447589867294],
+ [&#39;node-480 5&amp;70&#39;, 0.6406702685241514],
+ [&#39;node-481 5&amp;71&#39;, 0.18174382278163212],
+ [&#39;node-482 5&amp;72&#39;, 0.11543175691448171],
+ [&#39;node-483 5&amp;73&#39;, 1.0000000000000004],
+ [&#39;node-484 5&amp;74&#39;, 0.1178128757360724],
+ [&#39;node-485 5&amp;75&#39;, 0.6610793135683067],
+ [&#39;node-486 5&amp;76&#39;, 0.12984372908941064],
+ [&#39;node-487 5&amp;77&#39;, 0.17341932558473308],
+ [&#39;node-488 5&amp;78&#39;, 0.16104336627135885],
+ [&#39;node-489 5&amp;79&#39;, 0.1686923178190831],
+ [&#39;node-490 5&amp;80&#39;, 0.1643350466727519],
+ [&#39;node-491 5&amp;81&#39;, 0.0849349026234825],
+ [&#39;node-492 5&amp;82&#39;, 0.1724041400869462],
+ [&#39;node-493 5&amp;83&#39;, 0.14911581036007734],
+ [&#39;node-494 5&amp;84&#39;, 0.19073320923724538],
+ [&#39;node-495 6&amp;6&#39;, 1.0000000000000002],
+ [&#39;node-496 6&amp;7&#39;, 0.122838970348511],
+ [&#39;node-497 6&amp;8&#39;, 0.09167631822412375],
+ [&#39;node-498 6&amp;9&#39;, 0.1146746882277536],
+ [&#39;node-499 6&amp;10&#39;, 0.11837082168325957],
+ [&#39;node-500 6&amp;11&#39;, 0.10775838139969644],
+ [&#39;node-501 6&amp;12&#39;, 0.16651262658110416],
+ [&#39;node-502 6&amp;13&#39;, 0.08805946264500406],
+ [&#39;node-503 6&amp;14&#39;, 0.1331983312563809],
+ [&#39;node-504 6&amp;15&#39;, 0.16243270515152416],
+ [&#39;node-505 6&amp;16&#39;, 0.13058335164448293],
+ [&#39;node-506 6&amp;17&#39;, 0.11328484155941038],
+ [&#39;node-507 6&amp;18&#39;, 0.11111341802773501],
+ [&#39;node-508 6&amp;19&#39;, 0.1348893719828511],
+ [&#39;node-509 6&amp;20&#39;, 0.12333933360906077],
+ [&#39;node-510 6&amp;21&#39;, 0.14285280085232627],
+ [&#39;node-511 6&amp;22&#39;, 0.1178128757360723],
+ [&#39;node-512 6&amp;23&#39;, 1.0000000000000002],
+ [&#39;node-513 6&amp;24&#39;, 0.122838970348511],
+ [&#39;node-514 6&amp;25&#39;, 0.09167631822412375],
+ [&#39;node-515 6&amp;26&#39;, 0.1146746882277536],
+ [&#39;node-516 6&amp;27&#39;, 0.11837082168325957],
+ [&#39;node-517 6&amp;28&#39;, 0.10775838139969644],
+ [&#39;node-518 6&amp;29&#39;, 0.16651262658110416],
+ [&#39;node-519 6&amp;30&#39;, 0.08805946264500406],
+ [&#39;node-520 6&amp;31&#39;, 0.1331983312563809],
+ [&#39;node-521 6&amp;32&#39;, 0.16243270515152416],
+ [&#39;node-522 6&amp;33&#39;, 0.13058335164448293],
+ [&#39;node-523 6&amp;34&#39;, 0.11328484155941038],
+ [&#39;node-524 6&amp;35&#39;, 0.11111341802773501],
+ [&#39;node-525 6&amp;36&#39;, 0.1348893719828511],
+ [&#39;node-526 6&amp;37&#39;, 0.12333933360906077],
+ [&#39;node-527 6&amp;38&#39;, 0.14285280085232627],
+ [&#39;node-528 6&amp;39&#39;, 0.1178128757360723],
+ [&#39;node-529 6&amp;40&#39;, 1.0000000000000002],
+ [&#39;node-530 6&amp;41&#39;, 0.122838970348511],
+ [&#39;node-531 6&amp;42&#39;, 0.09167631822412375],
+ [&#39;node-532 6&amp;43&#39;, 0.1146746882277536],
+ [&#39;node-533 6&amp;44&#39;, 0.11837082168325957],
+ [&#39;node-534 6&amp;45&#39;, 0.10775838139969644],
+ [&#39;node-535 6&amp;46&#39;, 0.16651262658110416],
+ [&#39;node-536 6&amp;47&#39;, 0.08805946264500406],
+ [&#39;node-537 6&amp;48&#39;, 0.1331983312563809],
+ [&#39;node-538 6&amp;49&#39;, 0.16243270515152416],
+ [&#39;node-539 6&amp;50&#39;, 0.13058335164448293],
+ [&#39;node-540 6&amp;51&#39;, 0.11328484155941038],
+ [&#39;node-541 6&amp;52&#39;, 0.11111341802773501],
+ [&#39;node-542 6&amp;53&#39;, 0.1348893719828511],
+ [&#39;node-543 6&amp;54&#39;, 0.12333933360906077],
+ [&#39;node-544 6&amp;55&#39;, 0.14285280085232627],
+ [&#39;node-545 6&amp;56&#39;, 0.1178128757360723],
+ [&#39;node-546 6&amp;57&#39;, 1.0000000000000002],
+ [&#39;node-547 6&amp;58&#39;, 0.122838970348511],
+ [&#39;node-548 6&amp;59&#39;, 0.09167631822412375],
+ [&#39;node-549 6&amp;60&#39;, 0.1146746882277536],
+ [&#39;node-550 6&amp;61&#39;, 0.11837082168325957],
+ [&#39;node-551 6&amp;62&#39;, 0.10775838139969644],
+ [&#39;node-552 6&amp;63&#39;, 0.16651262658110416],
+ [&#39;node-553 6&amp;64&#39;, 0.08805946264500406],
+ [&#39;node-554 6&amp;65&#39;, 0.1331983312563809],
+ [&#39;node-555 6&amp;66&#39;, 0.16243270515152416],
+ [&#39;node-556 6&amp;67&#39;, 0.13058335164448293],
+ [&#39;node-557 6&amp;68&#39;, 0.11328484155941038],
+ [&#39;node-558 6&amp;69&#39;, 0.11111341802773501],
+ [&#39;node-559 6&amp;70&#39;, 0.1348893719828511],
+ [&#39;node-560 6&amp;71&#39;, 0.12333933360906077],
+ [&#39;node-561 6&amp;72&#39;, 0.14285280085232627],
+ [&#39;node-562 6&amp;73&#39;, 0.1178128757360723],
+ [&#39;node-563 6&amp;74&#39;, 1.0000000000000002],
+ [&#39;node-564 6&amp;75&#39;, 0.122838970348511],
+ [&#39;node-565 6&amp;76&#39;, 0.09167631822412375],
+ [&#39;node-566 6&amp;77&#39;, 0.1146746882277536],
+ [&#39;node-567 6&amp;78&#39;, 0.11837082168325957],
+ [&#39;node-568 6&amp;79&#39;, 0.10775838139969644],
+ [&#39;node-569 6&amp;80&#39;, 0.16651262658110416],
+ [&#39;node-570 6&amp;81&#39;, 0.08805946264500406],
+ [&#39;node-571 6&amp;82&#39;, 0.1331983312563809],
+ [&#39;node-572 6&amp;83&#39;, 0.16243270515152416],
+ [&#39;node-573 6&amp;84&#39;, 0.13058335164448293],
+ [&#39;node-574 7&amp;7&#39;, 1.0],
+ [&#39;node-575 7&amp;8&#39;, 0.11218355749592715],
+ [&#39;node-576 7&amp;9&#39;, 0.15571032380798056],
+ [&#39;node-577 7&amp;10&#39;, 0.17210559970204073],
+ [&#39;node-578 7&amp;11&#39;, 0.1599018648769898],
+ [&#39;node-579 7&amp;12&#39;, 0.1601418196520784],
+ [&#39;node-580 7&amp;13&#39;, 0.07995538824065002],
+ [&#39;node-581 7&amp;14&#39;, 0.16893863309429372],
+ [&#39;node-582 7&amp;15&#39;, 0.14532956889666887],
+ [&#39;node-583 7&amp;16&#39;, 0.1827395844747099],
+ [&#39;node-584 7&amp;17&#39;, 0.19564446071418576],
+ [&#39;node-585 7&amp;18&#39;, 0.167480433102321],
+ [&#39;node-586 7&amp;19&#39;, 0.5109263979832973],
+ [&#39;node-587 7&amp;20&#39;, 0.18541103792418276],
+ [&#39;node-588 7&amp;21&#39;, 0.12102931686639284],
+ [&#39;node-589 7&amp;22&#39;, 0.6610793135683074],
+ [&#39;node-590 7&amp;23&#39;, 0.12283897034851096],
+ [&#39;node-591 7&amp;24&#39;, 1.0],
+ [&#39;node-592 7&amp;25&#39;, 0.11218355749592715],
+ [&#39;node-593 7&amp;26&#39;, 0.15571032380798056],
+ [&#39;node-594 7&amp;27&#39;, 0.17210559970204073],
+ [&#39;node-595 7&amp;28&#39;, 0.1599018648769898],
+ [&#39;node-596 7&amp;29&#39;, 0.1601418196520784],
+ [&#39;node-597 7&amp;30&#39;, 0.07995538824065002],
+ [&#39;node-598 7&amp;31&#39;, 0.16893863309429372],
+ [&#39;node-599 7&amp;32&#39;, 0.14532956889666887],
+ [&#39;node-600 7&amp;33&#39;, 0.1827395844747099],
+ [&#39;node-601 7&amp;34&#39;, 0.19564446071418576],
+ [&#39;node-602 7&amp;35&#39;, 0.167480433102321],
+ [&#39;node-603 7&amp;36&#39;, 0.5109263979832973],
+ [&#39;node-604 7&amp;37&#39;, 0.18541103792418276],
+ [&#39;node-605 7&amp;38&#39;, 0.12102931686639284],
+ [&#39;node-606 7&amp;39&#39;, 0.6610793135683074],
+ [&#39;node-607 7&amp;40&#39;, 0.12283897034851096],
+ [&#39;node-608 7&amp;41&#39;, 1.0],
+ [&#39;node-609 7&amp;42&#39;, 0.11218355749592715],
+ [&#39;node-610 7&amp;43&#39;, 0.15571032380798056],
+ [&#39;node-611 7&amp;44&#39;, 0.17210559970204073],
+ [&#39;node-612 7&amp;45&#39;, 0.1599018648769898],
+ [&#39;node-613 7&amp;46&#39;, 0.1601418196520784],
+ [&#39;node-614 7&amp;47&#39;, 0.07995538824065002],
+ [&#39;node-615 7&amp;48&#39;, 0.16893863309429372],
+ [&#39;node-616 7&amp;49&#39;, 0.14532956889666887],
+ [&#39;node-617 7&amp;50&#39;, 0.1827395844747099],
+ [&#39;node-618 7&amp;51&#39;, 0.19564446071418576],
+ [&#39;node-619 7&amp;52&#39;, 0.167480433102321],
+ [&#39;node-620 7&amp;53&#39;, 0.5109263979832973],
+ [&#39;node-621 7&amp;54&#39;, 0.18541103792418276],
+ [&#39;node-622 7&amp;55&#39;, 0.12102931686639284],
+ [&#39;node-623 7&amp;56&#39;, 0.6610793135683074],
+ [&#39;node-624 7&amp;57&#39;, 0.12283897034851096],
+ [&#39;node-625 7&amp;58&#39;, 1.0],
+ [&#39;node-626 7&amp;59&#39;, 0.11218355749592715],
+ [&#39;node-627 7&amp;60&#39;, 0.15571032380798056],
+ [&#39;node-628 7&amp;61&#39;, 0.17210559970204073],
+ [&#39;node-629 7&amp;62&#39;, 0.1599018648769898],
+ [&#39;node-630 7&amp;63&#39;, 0.1601418196520784],
+ [&#39;node-631 7&amp;64&#39;, 0.07995538824065002],
+ [&#39;node-632 7&amp;65&#39;, 0.16893863309429372],
+ [&#39;node-633 7&amp;66&#39;, 0.14532956889666887],
+ [&#39;node-634 7&amp;67&#39;, 0.1827395844747099],
+ [&#39;node-635 7&amp;68&#39;, 0.19564446071418576],
+ [&#39;node-636 7&amp;69&#39;, 0.167480433102321],
+ [&#39;node-637 7&amp;70&#39;, 0.5109263979832973],
+ [&#39;node-638 7&amp;71&#39;, 0.18541103792418276],
+ [&#39;node-639 7&amp;72&#39;, 0.12102931686639284],
+ [&#39;node-640 7&amp;73&#39;, 0.6610793135683074],
+ [&#39;node-641 7&amp;74&#39;, 0.12283897034851096],
+ [&#39;node-642 7&amp;75&#39;, 1.0],
+ [&#39;node-643 7&amp;76&#39;, 0.11218355749592715],
+ [&#39;node-644 7&amp;77&#39;, 0.15571032380798056],
+ [&#39;node-645 7&amp;78&#39;, 0.17210559970204073],
+ [&#39;node-646 7&amp;79&#39;, 0.1599018648769898],
+ [&#39;node-647 7&amp;80&#39;, 0.1601418196520784],
+ [&#39;node-648 7&amp;81&#39;, 0.07995538824065002],
+ [&#39;node-649 7&amp;82&#39;, 0.16893863309429372],
+ [&#39;node-650 7&amp;83&#39;, 0.14532956889666887],
+ [&#39;node-651 7&amp;84&#39;, 0.1827395844747099],
+ [&#39;node-652 8&amp;8&#39;, 1.0000000000000002],
+ [&#39;node-653 8&amp;9&#39;, 0.16299290684871542],
+ [&#39;node-654 8&amp;10&#39;, 0.10825180519659923],
+ [&#39;node-655 8&amp;11&#39;, 0.1285710729507081],
+ [&#39;node-656 8&amp;12&#39;, 0.19243747960550278],
+ [&#39;node-657 8&amp;13&#39;, 0.07964391573039824],
+ [&#39;node-658 8&amp;14&#39;, 0.12800445945462377],
+ [&#39;node-659 8&amp;15&#39;, 0.1205918212410226],
+ [&#39;node-660 8&amp;16&#39;, 0.14801147167095963],
+ [&#39;node-661 8&amp;17&#39;, 0.09379047475434894],
+ [&#39;node-662 8&amp;18&#39;, 0.12059158477880916],
+ [&#39;node-663 8&amp;19&#39;, 0.10838698624189799],
+ [&#39;node-664 8&amp;20&#39;, 0.1342985873079714],
+ [&#39;node-665 8&amp;21&#39;, 0.09285619495506103],
+ [&#39;node-666 8&amp;22&#39;, 0.1298437290894106],
+ [&#39;node-667 8&amp;23&#39;, 0.09167631822412373],
+ [&#39;node-668 8&amp;24&#39;, 0.11218355749592722],
+ [&#39;node-669 8&amp;25&#39;, 1.0000000000000002],
+ [&#39;node-670 8&amp;26&#39;, 0.16299290684871542],
+ [&#39;node-671 8&amp;27&#39;, 0.10825180519659923],
+ [&#39;node-672 8&amp;28&#39;, 0.1285710729507081],
+ [&#39;node-673 8&amp;29&#39;, 0.19243747960550278],
+ [&#39;node-674 8&amp;30&#39;, 0.07964391573039824],
+ [&#39;node-675 8&amp;31&#39;, 0.12800445945462377],
+ [&#39;node-676 8&amp;32&#39;, 0.1205918212410226],
+ [&#39;node-677 8&amp;33&#39;, 0.14801147167095963],
+ [&#39;node-678 8&amp;34&#39;, 0.09379047475434894],
+ [&#39;node-679 8&amp;35&#39;, 0.12059158477880916],
+ [&#39;node-680 8&amp;36&#39;, 0.10838698624189799],
+ [&#39;node-681 8&amp;37&#39;, 0.1342985873079714],
+ [&#39;node-682 8&amp;38&#39;, 0.09285619495506103],
+ [&#39;node-683 8&amp;39&#39;, 0.1298437290894106],
+ [&#39;node-684 8&amp;40&#39;, 0.09167631822412373],
+ [&#39;node-685 8&amp;41&#39;, 0.11218355749592722],
+ [&#39;node-686 8&amp;42&#39;, 1.0000000000000002],
+ [&#39;node-687 8&amp;43&#39;, 0.16299290684871542],
+ [&#39;node-688 8&amp;44&#39;, 0.10825180519659923],
+ [&#39;node-689 8&amp;45&#39;, 0.1285710729507081],
+ [&#39;node-690 8&amp;46&#39;, 0.19243747960550278],
+ [&#39;node-691 8&amp;47&#39;, 0.07964391573039824],
+ [&#39;node-692 8&amp;48&#39;, 0.12800445945462377],
+ [&#39;node-693 8&amp;49&#39;, 0.1205918212410226],
+ [&#39;node-694 8&amp;50&#39;, 0.14801147167095963],
+ [&#39;node-695 8&amp;51&#39;, 0.09379047475434894],
+ [&#39;node-696 8&amp;52&#39;, 0.12059158477880916],
+ [&#39;node-697 8&amp;53&#39;, 0.10838698624189799],
+ [&#39;node-698 8&amp;54&#39;, 0.1342985873079714],
+ [&#39;node-699 8&amp;55&#39;, 0.09285619495506103],
+ [&#39;node-700 8&amp;56&#39;, 0.1298437290894106],
+ [&#39;node-701 8&amp;57&#39;, 0.09167631822412373],
+ [&#39;node-702 8&amp;58&#39;, 0.11218355749592722],
+ [&#39;node-703 8&amp;59&#39;, 1.0000000000000002],
+ [&#39;node-704 8&amp;60&#39;, 0.16299290684871542],
+ [&#39;node-705 8&amp;61&#39;, 0.10825180519659923],
+ [&#39;node-706 8&amp;62&#39;, 0.1285710729507081],
+ [&#39;node-707 8&amp;63&#39;, 0.19243747960550278],
+ [&#39;node-708 8&amp;64&#39;, 0.07964391573039824],
+ [&#39;node-709 8&amp;65&#39;, 0.12800445945462377],
+ [&#39;node-710 8&amp;66&#39;, 0.1205918212410226],
+ [&#39;node-711 8&amp;67&#39;, 0.14801147167095963],
+ [&#39;node-712 8&amp;68&#39;, 0.09379047475434894],
+ [&#39;node-713 8&amp;69&#39;, 0.12059158477880916],
+ [&#39;node-714 8&amp;70&#39;, 0.10838698624189799],
+ [&#39;node-715 8&amp;71&#39;, 0.1342985873079714],
+ [&#39;node-716 8&amp;72&#39;, 0.09285619495506103],
+ [&#39;node-717 8&amp;73&#39;, 0.1298437290894106],
+ [&#39;node-718 8&amp;74&#39;, 0.09167631822412373],
+ [&#39;node-719 8&amp;75&#39;, 0.11218355749592722],
+ [&#39;node-720 8&amp;76&#39;, 1.0000000000000002],
+ [&#39;node-721 8&amp;77&#39;, 0.16299290684871542],
+ [&#39;node-722 8&amp;78&#39;, 0.10825180519659923],
+ [&#39;node-723 8&amp;79&#39;, 0.1285710729507081],
+ [&#39;node-724 8&amp;80&#39;, 0.19243747960550278],
+ [&#39;node-725 8&amp;81&#39;, 0.07964391573039824],
+ [&#39;node-726 8&amp;82&#39;, 0.12800445945462377],
+ [&#39;node-727 8&amp;83&#39;, 0.1205918212410226],
+ [&#39;node-728 8&amp;84&#39;, 0.14801147167095963],
+ [&#39;node-729 9&amp;9&#39;, 1.0000000000000002],
+ [&#39;node-730 9&amp;10&#39;, 0.17926732626755432],
+ [&#39;node-731 9&amp;11&#39;, 0.231202709669573],
+ [&#39;node-732 9&amp;12&#39;, 0.24740951592933452],
+ [&#39;node-733 9&amp;13&#39;, 0.09167887521639916],
+ [&#39;node-734 9&amp;14&#39;, 0.1870846769475587],
+ [&#39;node-735 9&amp;15&#39;, 0.13960154337979208],
+ [&#39;node-736 9&amp;16&#39;, 0.2172094570012484],
+ [&#39;node-737 9&amp;17&#39;, 0.16862558422888008],
+ [&#39;node-738 9&amp;18&#39;, 0.19540056006198453],
+ [&#39;node-739 9&amp;19&#39;, 0.1148104205629556],
+ [&#39;node-740 9&amp;20&#39;, 0.21237984766089507],
+ [&#39;node-741 9&amp;21&#39;, 0.1339268084244619],
+ [&#39;node-742 9&amp;22&#39;, 0.1734193255847331],
+ [&#39;node-743 9&amp;23&#39;, 0.11467468822775362],
+ [&#39;node-744 9&amp;24&#39;, 0.15571032380798053],
+ [&#39;node-745 9&amp;25&#39;, 0.16299290684871537],
+ [&#39;node-746 9&amp;26&#39;, 1.0000000000000002],
+ [&#39;node-747 9&amp;27&#39;, 0.17926732626755432],
+ [&#39;node-748 9&amp;28&#39;, 0.231202709669573],
+ [&#39;node-749 9&amp;29&#39;, 0.24740951592933452],
+ [&#39;node-750 9&amp;30&#39;, 0.09167887521639916],
+ [&#39;node-751 9&amp;31&#39;, 0.1870846769475587],
+ [&#39;node-752 9&amp;32&#39;, 0.13960154337979208],
+ [&#39;node-753 9&amp;33&#39;, 0.2172094570012484],
+ [&#39;node-754 9&amp;34&#39;, 0.16862558422888008],
+ [&#39;node-755 9&amp;35&#39;, 0.19540056006198453],
+ [&#39;node-756 9&amp;36&#39;, 0.1148104205629556],
+ [&#39;node-757 9&amp;37&#39;, 0.21237984766089507],
+ [&#39;node-758 9&amp;38&#39;, 0.1339268084244619],
+ [&#39;node-759 9&amp;39&#39;, 0.1734193255847331],
+ [&#39;node-760 9&amp;40&#39;, 0.11467468822775362],
+ [&#39;node-761 9&amp;41&#39;, 0.15571032380798053],
+ [&#39;node-762 9&amp;42&#39;, 0.16299290684871537],
+ [&#39;node-763 9&amp;43&#39;, 1.0000000000000002],
+ [&#39;node-764 9&amp;44&#39;, 0.17926732626755432],
+ [&#39;node-765 9&amp;45&#39;, 0.231202709669573],
+ [&#39;node-766 9&amp;46&#39;, 0.24740951592933452],
+ [&#39;node-767 9&amp;47&#39;, 0.09167887521639916],
+ [&#39;node-768 9&amp;48&#39;, 0.1870846769475587],
+ [&#39;node-769 9&amp;49&#39;, 0.13960154337979208],
+ [&#39;node-770 9&amp;50&#39;, 0.2172094570012484],
+ [&#39;node-771 9&amp;51&#39;, 0.16862558422888008],
+ [&#39;node-772 9&amp;52&#39;, 0.19540056006198453],
+ [&#39;node-773 9&amp;53&#39;, 0.1148104205629556],
+ [&#39;node-774 9&amp;54&#39;, 0.21237984766089507],
+ [&#39;node-775 9&amp;55&#39;, 0.1339268084244619],
+ [&#39;node-776 9&amp;56&#39;, 0.1734193255847331],
+ [&#39;node-777 9&amp;57&#39;, 0.11467468822775362],
+ [&#39;node-778 9&amp;58&#39;, 0.15571032380798053],
+ [&#39;node-779 9&amp;59&#39;, 0.16299290684871537],
+ [&#39;node-780 9&amp;60&#39;, 1.0000000000000002],
+ [&#39;node-781 9&amp;61&#39;, 0.17926732626755432],
+ [&#39;node-782 9&amp;62&#39;, 0.231202709669573],
+ [&#39;node-783 9&amp;63&#39;, 0.24740951592933452],
+ [&#39;node-784 9&amp;64&#39;, 0.09167887521639916],
+ [&#39;node-785 9&amp;65&#39;, 0.1870846769475587],
+ [&#39;node-786 9&amp;66&#39;, 0.13960154337979208],
+ [&#39;node-787 9&amp;67&#39;, 0.2172094570012484],
+ [&#39;node-788 9&amp;68&#39;, 0.16862558422888008],
+ [&#39;node-789 9&amp;69&#39;, 0.19540056006198453],
+ [&#39;node-790 9&amp;70&#39;, 0.1148104205629556],
+ [&#39;node-791 9&amp;71&#39;, 0.21237984766089507],
+ [&#39;node-792 9&amp;72&#39;, 0.1339268084244619],
+ [&#39;node-793 9&amp;73&#39;, 0.1734193255847331],
+ [&#39;node-794 9&amp;74&#39;, 0.11467468822775362],
+ [&#39;node-795 9&amp;75&#39;, 0.15571032380798053],
+ [&#39;node-796 9&amp;76&#39;, 0.16299290684871537],
+ [&#39;node-797 9&amp;77&#39;, 1.0000000000000002],
+ [&#39;node-798 9&amp;78&#39;, 0.17926732626755432],
+ [&#39;node-799 9&amp;79&#39;, 0.231202709669573],
+ [&#39;node-800 9&amp;80&#39;, 0.24740951592933452],
+ [&#39;node-801 9&amp;81&#39;, 0.09167887521639916],
+ [&#39;node-802 9&amp;82&#39;, 0.1870846769475587],
+ [&#39;node-803 9&amp;83&#39;, 0.13960154337979208],
+ [&#39;node-804 9&amp;84&#39;, 0.2172094570012484],
+ [&#39;node-805 10&amp;10&#39;, 0.9999999999999999],
+ [&#39;node-806 10&amp;11&#39;, 0.1796018829119187],
+ [&#39;node-807 10&amp;12&#39;, 0.15077893108129414],
+ [&#39;node-808 10&amp;13&#39;, 0.09139231536856134],
+ [&#39;node-809 10&amp;14&#39;, 0.2136191420108483],
+ [&#39;node-810 10&amp;15&#39;, 0.15542883131212346],
+ [&#39;node-811 10&amp;16&#39;, 0.19872631308773414],
+ [&#39;node-812 10&amp;17&#39;, 0.2301133894931897],
+ [&#39;node-813 10&amp;18&#39;, 0.21015013058335585],
+ [&#39;node-814 10&amp;19&#39;, 0.09660001280636636],
+ [&#39;node-815 10&amp;20&#39;, 0.26381738874006816],
+ [&#39;node-816 10&amp;21&#39;, 0.151036678635807],
+ [&#39;node-817 10&amp;22&#39;, 0.16104336627135865],
+ [&#39;node-818 10&amp;23&#39;, 0.11837082168325962],
+ [&#39;node-819 10&amp;24&#39;, 0.17210559970204056],
+ [&#39;node-820 10&amp;25&#39;, 0.10825180519659931],
+ [&#39;node-821 10&amp;26&#39;, 0.17926732626755446],
+ [&#39;node-822 10&amp;27&#39;, 0.9999999999999999],
+ [&#39;node-823 10&amp;28&#39;, 0.1796018829119187],
+ [&#39;node-824 10&amp;29&#39;, 0.15077893108129414],
+ [&#39;node-825 10&amp;30&#39;, 0.09139231536856134],
+ [&#39;node-826 10&amp;31&#39;, 0.2136191420108483],
+ [&#39;node-827 10&amp;32&#39;, 0.15542883131212346],
+ [&#39;node-828 10&amp;33&#39;, 0.19872631308773414],
+ [&#39;node-829 10&amp;34&#39;, 0.2301133894931897],
+ [&#39;node-830 10&amp;35&#39;, 0.21015013058335585],
+ [&#39;node-831 10&amp;36&#39;, 0.09660001280636636],
+ [&#39;node-832 10&amp;37&#39;, 0.26381738874006816],
+ [&#39;node-833 10&amp;38&#39;, 0.151036678635807],
+ [&#39;node-834 10&amp;39&#39;, 0.16104336627135865],
+ [&#39;node-835 10&amp;40&#39;, 0.11837082168325962],
+ [&#39;node-836 10&amp;41&#39;, 0.17210559970204056],
+ [&#39;node-837 10&amp;42&#39;, 0.10825180519659931],
+ [&#39;node-838 10&amp;43&#39;, 0.17926732626755446],
+ [&#39;node-839 10&amp;44&#39;, 0.9999999999999999],
+ [&#39;node-840 10&amp;45&#39;, 0.1796018829119187],
+ [&#39;node-841 10&amp;46&#39;, 0.15077893108129414],
+ [&#39;node-842 10&amp;47&#39;, 0.09139231536856134],
+ [&#39;node-843 10&amp;48&#39;, 0.2136191420108483],
+ [&#39;node-844 10&amp;49&#39;, 0.15542883131212346],
+ [&#39;node-845 10&amp;50&#39;, 0.19872631308773414],
+ [&#39;node-846 10&amp;51&#39;, 0.2301133894931897],
+ [&#39;node-847 10&amp;52&#39;, 0.21015013058335585],
+ [&#39;node-848 10&amp;53&#39;, 0.09660001280636636],
+ [&#39;node-849 10&amp;54&#39;, 0.26381738874006816],
+ [&#39;node-850 10&amp;55&#39;, 0.151036678635807],
+ [&#39;node-851 10&amp;56&#39;, 0.16104336627135865],
+ [&#39;node-852 10&amp;57&#39;, 0.11837082168325962],
+ [&#39;node-853 10&amp;58&#39;, 0.17210559970204056],
+ [&#39;node-854 10&amp;59&#39;, 0.10825180519659931],
+ [&#39;node-855 10&amp;60&#39;, 0.17926732626755446],
+ [&#39;node-856 10&amp;61&#39;, 0.9999999999999999],
+ [&#39;node-857 10&amp;62&#39;, 0.1796018829119187],
+ [&#39;node-858 10&amp;63&#39;, 0.15077893108129414],
+ [&#39;node-859 10&amp;64&#39;, 0.09139231536856134],
+ [&#39;node-860 10&amp;65&#39;, 0.2136191420108483],
+ [&#39;node-861 10&amp;66&#39;, 0.15542883131212346],
+ [&#39;node-862 10&amp;67&#39;, 0.19872631308773414],
+ [&#39;node-863 10&amp;68&#39;, 0.2301133894931897],
+ [&#39;node-864 10&amp;69&#39;, 0.21015013058335585],
+ [&#39;node-865 10&amp;70&#39;, 0.09660001280636636],
+ [&#39;node-866 10&amp;71&#39;, 0.26381738874006816],
+ [&#39;node-867 10&amp;72&#39;, 0.151036678635807],
+ [&#39;node-868 10&amp;73&#39;, 0.16104336627135865],
+ [&#39;node-869 10&amp;74&#39;, 0.11837082168325962],
+ [&#39;node-870 10&amp;75&#39;, 0.17210559970204056],
+ [&#39;node-871 10&amp;76&#39;, 0.10825180519659931],
+ [&#39;node-872 10&amp;77&#39;, 0.17926732626755446],
+ [&#39;node-873 10&amp;78&#39;, 0.9999999999999999],
+ [&#39;node-874 10&amp;79&#39;, 0.1796018829119187],
+ [&#39;node-875 10&amp;80&#39;, 0.15077893108129414],
+ [&#39;node-876 10&amp;81&#39;, 0.09139231536856134],
+ [&#39;node-877 10&amp;82&#39;, 0.2136191420108483],
+ [&#39;node-878 10&amp;83&#39;, 0.15542883131212346],
+ [&#39;node-879 10&amp;84&#39;, 0.19872631308773414],
+ [&#39;node-880 11&amp;11&#39;, 1.0000000000000002],
+ [&#39;node-881 11&amp;12&#39;, 0.199859731687872],
+ [&#39;node-882 11&amp;13&#39;, 0.082593233771651],
+ [&#39;node-883 11&amp;14&#39;, 0.15854004498109373],
+ [&#39;node-884 11&amp;15&#39;, 0.14886399102399672],
+ [&#39;node-885 11&amp;16&#39;, 0.169780107468],
+ [&#39;node-886 11&amp;17&#39;, 0.18291255217636207],
+ [&#39;node-887 11&amp;18&#39;, 0.1473159081961476],
+ [&#39;node-888 11&amp;19&#39;, 0.10484261274488037],
+ [&#39;node-889 11&amp;20&#39;, 0.15237683326444637],
+ [&#39;node-890 11&amp;21&#39;, 0.11791991617641909],
+ [&#39;node-891 11&amp;22&#39;, 0.16869231781908317],
+ [&#39;node-892 11&amp;23&#39;, 0.10775838139969647],
+ [&#39;node-893 11&amp;24&#39;, 0.15990186487698974],
+ [&#39;node-894 11&amp;25&#39;, 0.1285710729507081],
+ [&#39;node-895 11&amp;26&#39;, 0.2312027096695732],
+ [&#39;node-896 11&amp;27&#39;, 0.17960188291191884],
+ [&#39;node-897 11&amp;28&#39;, 1.0000000000000002],
+ [&#39;node-898 11&amp;29&#39;, 0.199859731687872],
+ [&#39;node-899 11&amp;30&#39;, 0.082593233771651],
+ [&#39;node-900 11&amp;31&#39;, 0.15854004498109373],
+ [&#39;node-901 11&amp;32&#39;, 0.14886399102399672],
+ [&#39;node-902 11&amp;33&#39;, 0.169780107468],
+ [&#39;node-903 11&amp;34&#39;, 0.18291255217636207],
+ [&#39;node-904 11&amp;35&#39;, 0.1473159081961476],
+ [&#39;node-905 11&amp;36&#39;, 0.10484261274488037],
+ [&#39;node-906 11&amp;37&#39;, 0.15237683326444637],
+ [&#39;node-907 11&amp;38&#39;, 0.11791991617641909],
+ [&#39;node-908 11&amp;39&#39;, 0.16869231781908317],
+ [&#39;node-909 11&amp;40&#39;, 0.10775838139969647],
+ [&#39;node-910 11&amp;41&#39;, 0.15990186487698974],
+ [&#39;node-911 11&amp;42&#39;, 0.1285710729507081],
+ [&#39;node-912 11&amp;43&#39;, 0.2312027096695732],
+ [&#39;node-913 11&amp;44&#39;, 0.17960188291191884],
+ [&#39;node-914 11&amp;45&#39;, 1.0000000000000002],
+ [&#39;node-915 11&amp;46&#39;, 0.199859731687872],
+ [&#39;node-916 11&amp;47&#39;, 0.082593233771651],
+ [&#39;node-917 11&amp;48&#39;, 0.15854004498109373],
+ [&#39;node-918 11&amp;49&#39;, 0.14886399102399672],
+ [&#39;node-919 11&amp;50&#39;, 0.169780107468],
+ [&#39;node-920 11&amp;51&#39;, 0.18291255217636207],
+ [&#39;node-921 11&amp;52&#39;, 0.1473159081961476],
+ [&#39;node-922 11&amp;53&#39;, 0.10484261274488037],
+ [&#39;node-923 11&amp;54&#39;, 0.15237683326444637],
+ [&#39;node-924 11&amp;55&#39;, 0.11791991617641909],
+ [&#39;node-925 11&amp;56&#39;, 0.16869231781908317],
+ [&#39;node-926 11&amp;57&#39;, 0.10775838139969647],
+ [&#39;node-927 11&amp;58&#39;, 0.15990186487698974],
+ [&#39;node-928 11&amp;59&#39;, 0.1285710729507081],
+ [&#39;node-929 11&amp;60&#39;, 0.2312027096695732],
+ [&#39;node-930 11&amp;61&#39;, 0.17960188291191884],
+ [&#39;node-931 11&amp;62&#39;, 1.0000000000000002],
+ [&#39;node-932 11&amp;63&#39;, 0.199859731687872],
+ [&#39;node-933 11&amp;64&#39;, 0.082593233771651],
+ [&#39;node-934 11&amp;65&#39;, 0.15854004498109373],
+ [&#39;node-935 11&amp;66&#39;, 0.14886399102399672],
+ [&#39;node-936 11&amp;67&#39;, 0.169780107468],
+ [&#39;node-937 11&amp;68&#39;, 0.18291255217636207],
+ [&#39;node-938 11&amp;69&#39;, 0.1473159081961476],
+ [&#39;node-939 11&amp;70&#39;, 0.10484261274488037],
+ [&#39;node-940 11&amp;71&#39;, 0.15237683326444637],
+ [&#39;node-941 11&amp;72&#39;, 0.11791991617641909],
+ [&#39;node-942 11&amp;73&#39;, 0.16869231781908317],
+ [&#39;node-943 11&amp;74&#39;, 0.10775838139969647],
+ [&#39;node-944 11&amp;75&#39;, 0.15990186487698974],
+ [&#39;node-945 11&amp;76&#39;, 0.1285710729507081],
+ [&#39;node-946 11&amp;77&#39;, 0.2312027096695732],
+ [&#39;node-947 11&amp;78&#39;, 0.17960188291191884],
+ [&#39;node-948 11&amp;79&#39;, 1.0000000000000002],
+ [&#39;node-949 11&amp;80&#39;, 0.199859731687872],
+ [&#39;node-950 11&amp;81&#39;, 0.082593233771651],
+ [&#39;node-951 11&amp;82&#39;, 0.15854004498109373],
+ [&#39;node-952 11&amp;83&#39;, 0.14886399102399672],
+ [&#39;node-953 11&amp;84&#39;, 0.169780107468],
+ [&#39;node-954 12&amp;12&#39;, 1.0000000000000002],
+ [&#39;node-955 12&amp;13&#39;, 0.08308368895616565],
+ [&#39;node-956 12&amp;14&#39;, 0.21702454510724814],
+ [&#39;node-957 12&amp;15&#39;, 0.17399746005065364],
+ [&#39;node-958 12&amp;16&#39;, 0.22464556867182853],
+ [&#39;node-959 12&amp;17&#39;, 0.15961176783742323],
+ [&#39;node-960 12&amp;18&#39;, 0.17318237912488676],
+ [&#39;node-961 12&amp;19&#39;, 0.14744750250378036],
+ [&#39;node-962 12&amp;20&#39;, 0.1847437921396689],
+ [&#39;node-963 12&amp;21&#39;, 0.18295605183678174],
+ [&#39;node-964 12&amp;22&#39;, 0.1643350466727515],
+ [&#39;node-965 12&amp;23&#39;, 0.1665126265811042],
+ [&#39;node-966 12&amp;24&#39;, 0.1601418196520785],
+ [&#39;node-967 12&amp;25&#39;, 0.19243747960550267],
+ [&#39;node-968 12&amp;26&#39;, 0.24740951592933452],
+ [&#39;node-969 12&amp;27&#39;, 0.15077893108129387],
+ [&#39;node-970 12&amp;28&#39;, 0.19985973168787205],
+ [&#39;node-971 12&amp;29&#39;, 1.0000000000000002],
+ [&#39;node-972 12&amp;30&#39;, 0.08308368895616565],
+ [&#39;node-973 12&amp;31&#39;, 0.21702454510724814],
+ [&#39;node-974 12&amp;32&#39;, 0.17399746005065364],
+ [&#39;node-975 12&amp;33&#39;, 0.22464556867182853],
+ [&#39;node-976 12&amp;34&#39;, 0.15961176783742323],
+ [&#39;node-977 12&amp;35&#39;, 0.17318237912488676],
+ [&#39;node-978 12&amp;36&#39;, 0.14744750250378036],
+ [&#39;node-979 12&amp;37&#39;, 0.1847437921396689],
+ [&#39;node-980 12&amp;38&#39;, 0.18295605183678174],
+ [&#39;node-981 12&amp;39&#39;, 0.1643350466727515],
+ [&#39;node-982 12&amp;40&#39;, 0.1665126265811042],
+ [&#39;node-983 12&amp;41&#39;, 0.1601418196520785],
+ [&#39;node-984 12&amp;42&#39;, 0.19243747960550267],
+ [&#39;node-985 12&amp;43&#39;, 0.24740951592933452],
+ [&#39;node-986 12&amp;44&#39;, 0.15077893108129387],
+ [&#39;node-987 12&amp;45&#39;, 0.19985973168787205],
+ [&#39;node-988 12&amp;46&#39;, 1.0000000000000002],
+ [&#39;node-989 12&amp;47&#39;, 0.08308368895616565],
+ [&#39;node-990 12&amp;48&#39;, 0.21702454510724814],
+ [&#39;node-991 12&amp;49&#39;, 0.17399746005065364],
+ [&#39;node-992 12&amp;50&#39;, 0.22464556867182853],
+ [&#39;node-993 12&amp;51&#39;, 0.15961176783742323],
+ [&#39;node-994 12&amp;52&#39;, 0.17318237912488676],
+ [&#39;node-995 12&amp;53&#39;, 0.14744750250378036],
+ [&#39;node-996 12&amp;54&#39;, 0.1847437921396689],
+ [&#39;node-997 12&amp;55&#39;, 0.18295605183678174],
+ [&#39;node-998 12&amp;56&#39;, 0.1643350466727515],
+ [&#39;node-999 12&amp;57&#39;, 0.1665126265811042],
+ ...]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sentences</span> <span class="o">=</span> <span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Dokumen&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Dokumen&#39;</span><span class="p">][</span><span class="mi">1</span><span class="p">],</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Dokumen&#39;</span><span class="p">][</span><span class="mi">2</span><span class="p">],</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Dokumen&#39;</span><span class="p">][</span><span class="mi">3</span><span class="p">],</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Dokumen&#39;</span><span class="p">][</span><span class="mi">4</span><span class="p">],</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Dokumen&#39;</span><span class="p">][</span><span class="mi">5</span><span class="p">]]</span>
+<span class="n">tfidf_matrix</span> <span class="o">=</span> <span class="n">tfidf_vectorizer</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">sentences</span><span class="p">)</span><span class="o">.</span><span class="n">toarray</span><span class="p">()</span>
+<span class="n">G</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">Graph</span><span class="p">()</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">sentences</span><span class="p">)):</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">sentences</span><span class="p">)):</span>
+        <span class="n">similarity_score</span> <span class="o">=</span> <span class="n">cosine_similarity</span><span class="p">([</span><span class="n">tfidf_matrix</span><span class="p">[</span><span class="n">i</span><span class="p">]],</span> <span class="p">[</span><span class="n">tfidf_matrix</span><span class="p">[</span><span class="n">j</span><span class="p">]])[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">similarity_score</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">similarity_score</span> <span class="o">&gt;</span> <span class="mf">0.01</span><span class="p">:</span>  <span class="c1"># Sesuaikan threshold sesuai kebutuhan</span>
+            <span class="n">G</span><span class="o">.</span><span class="n">add_edge</span><span class="p">(</span><span class="n">sentences</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">sentences</span><span class="p">[</span><span class="n">j</span><span class="p">],</span> <span class="n">weight</span><span class="o">=</span><span class="n">similarity_score</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.13447729796967955
+0.07586588941498343
+0.15288738191798085
+0.08418339358907159
+0.14251168731358396
+0.09815194804603994
+0.7748810240108038
+0.09018622311676897
+0.12043239068590265
+0.09517288645497778
+0.08207759755868775
+0.6804133150583866
+0.10693097847548269
+0.13405226471785492
+0.07545902969755852
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Menggambar grafik</span>
+<span class="n">pos</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">spring_layout</span><span class="p">(</span><span class="n">G</span><span class="p">)</span>
+<span class="n">edge_labels</span> <span class="o">=</span> <span class="p">{(</span><span class="n">n1</span><span class="p">,</span> <span class="n">n2</span><span class="p">):</span> <span class="n">d</span><span class="p">[</span><span class="s1">&#39;weight&#39;</span><span class="p">]</span> <span class="k">for</span> <span class="n">n1</span><span class="p">,</span> <span class="n">n2</span><span class="p">,</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">G</span><span class="o">.</span><span class="n">edges</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="kc">True</span><span class="p">)}</span>
+
+<span class="n">nx</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="n">with_labels</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">node_size</span><span class="o">=</span><span class="mi">700</span><span class="p">,</span> <span class="n">node_color</span><span class="o">=</span><span class="s1">&#39;skyblue&#39;</span><span class="p">,</span> <span class="n">font_size</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">nx</span><span class="o">.</span><span class="n">draw_networkx_edge_labels</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="n">edge_labels</span><span class="o">=</span><span class="n">edge_labels</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/4e426c5d823edc1be021b6542647510bd685e5ceb689163743e8268fda15df41.png" src="_images/4e426c5d823edc1be021b6542647510bd685e5ceb689163743e8268fda15df41.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">closeness_centrality</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">closeness_centrality</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">distance</span><span class="o">=</span><span class="s1">&#39;weight&#39;</span><span class="p">)</span>
+
+<span class="n">sorted_closeness_centrality</span> <span class="o">=</span> <span class="p">{</span><span class="n">node</span><span class="p">:</span> <span class="n">value</span> <span class="k">for</span> <span class="n">node</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">closeness_centrality</span><span class="o">.</span><span class="n">items</span><span class="p">(),</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">item</span><span class="p">:</span> <span class="n">item</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)}</span>
+
+<span class="c1"># Membuat DataFrame dari hasil yang diurutkan</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">sorted_closeness_centrality</span><span class="o">.</span><span class="n">items</span><span class="p">()),</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Node&#39;</span><span class="p">,</span> <span class="s1">&#39;Closeness Centrality&#39;</span><span class="p">])</span>
+
+<span class="c1"># Menampilkan DataFrame</span>
+<span class="n">df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-fff5a464-9005-4add-961e-2c92fb98318d" class="colab-df-container">
+    <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Node</th>
+      <th>Closeness Centrality</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>JAKARTA, KOMPAS.com  Ketua Umum Partai Gelora ...</td>
+      <td>11.393746</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>JAKARTA, KOMPAS.com  Kesal dan pasrah, itulah ...</td>
+      <td>9.826948</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>JAKARTA, KOMPAS.com  Pemerintah Provinsi Pempr...</td>
+      <td>8.475644</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>JAKARTA, KOMPAS.com  Pengendara yang kendaraan...</td>
+      <td>7.936609</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>JAKARTA, KOMPAS.com  Kebakaran Gedung Taman Ka...</td>
+      <td>7.854562</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>JAKARTA, KOMPAS.com  Yayasan Perguruan Sumbang...</td>
+      <td>7.327421</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+    <div class="colab-df-buttons">
+
+  <div class="colab-df-container">
+    <button class="colab-df-convert" onclick="convertToInteractive('df-fff5a464-9005-4add-961e-2c92fb98318d')"
+            title="Convert this dataframe to an interactive table."
+            style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960">
+    <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"/>
+  </svg>
+    </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    .colab-df-buttons div {
+      margin-bottom: 4px;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+    <script>
+      const buttonEl =
+        document.querySelector('#df-fff5a464-9005-4add-961e-2c92fb98318d button.colab-df-convert');
+      buttonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+      async function convertToInteractive(key) {
+        const element = document.querySelector('#df-fff5a464-9005-4add-961e-2c92fb98318d');
+        const dataTable =
+          await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                    [key], {});
+        if (!dataTable) return;
+
+        const docLinkHtml = 'Like what you see? Visit the ' +
+          '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+          + ' to learn more about interactive tables.';
+        element.innerHTML = '';
+        dataTable['output_type'] = 'display_data';
+        await google.colab.output.renderOutput(dataTable, element);
+        const docLink = document.createElement('div');
+        docLink.innerHTML = docLinkHtml;
+        element.appendChild(docLink);
+      }
+    </script>
+  </div>
+
+
+<div id="df-6c5cca5b-02d4-4f77-885b-1f9fa050174c">
+  <button class="colab-df-quickchart" onclick="quickchart('df-6c5cca5b-02d4-4f77-885b-1f9fa050174c')"
+            title="Suggest charts."
+            style="display:none;">
+
+<svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+     width="24px">
+    <g>
+        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
+    </g>
+</svg>
+  </button>
+
+<style>
+  .colab-df-quickchart {
+      --bg-color: #E8F0FE;
+      --fill-color: #1967D2;
+      --hover-bg-color: #E2EBFA;
+      --hover-fill-color: #174EA6;
+      --disabled-fill-color: #AAA;
+      --disabled-bg-color: #DDD;
+  }
+
+  [theme=dark] .colab-df-quickchart {
+      --bg-color: #3B4455;
+      --fill-color: #D2E3FC;
+      --hover-bg-color: #434B5C;
+      --hover-fill-color: #FFFFFF;
+      --disabled-bg-color: #3B4455;
+      --disabled-fill-color: #666;
+  }
+
+  .colab-df-quickchart {
+    background-color: var(--bg-color);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    fill: var(--fill-color);
+    height: 32px;
+    padding: 0;
+    width: 32px;
+  }
+
+  .colab-df-quickchart:hover {
+    background-color: var(--hover-bg-color);
+    box-shadow: 0 1px 2px rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+    fill: var(--button-hover-fill-color);
+  }
+
+  .colab-df-quickchart-complete:disabled,
+  .colab-df-quickchart-complete:disabled:hover {
+    background-color: var(--disabled-bg-color);
+    fill: var(--disabled-fill-color);
+    box-shadow: none;
+  }
+
+  .colab-df-spinner {
+    border: 2px solid var(--fill-color);
+    border-color: transparent;
+    border-bottom-color: var(--fill-color);
+    animation:
+      spin 1s steps(1) infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+      border-left-color: var(--fill-color);
+    }
+    20% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    30% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+      border-right-color: var(--fill-color);
+    }
+    40% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    60% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+    }
+    80% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-bottom-color: var(--fill-color);
+    }
+    90% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+    }
+  }
+</style>
+
+  <script>
+    async function quickchart(key) {
+      const quickchartButtonEl =
+        document.querySelector('#' + key + ' button');
+      quickchartButtonEl.disabled = true;  // To prevent multiple clicks.
+      quickchartButtonEl.classList.add('colab-df-spinner');
+      try {
+        const charts = await google.colab.kernel.invokeFunction(
+            'suggestCharts', [key], {});
+      } catch (error) {
+        console.error('Error during call to suggestCharts:', error);
+      }
+      quickchartButtonEl.classList.remove('colab-df-spinner');
+      quickchartButtonEl.classList.add('colab-df-quickchart-complete');
+    }
+    (() => {
+      let quickchartButtonEl =
+        document.querySelector('#df-6c5cca5b-02d4-4f77-885b-1f9fa050174c button');
+      quickchartButtonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+    })();
+  </script>
+</div>
+    </div>
+  </div>
+</div></div>
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="markdown-notebooks.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Notebooks with MyST Markdown</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="CrawlingUAS.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><strong>UAS PPW</strong></p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book Community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
